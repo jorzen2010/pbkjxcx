@@ -1,0 +1,88 @@
+<!--pages/ucenter/ucenter.wxml-->
+<view class='topbg'>
+<view class='userinfo'>
+
+<view class='userinfo-text'>
+<image src="/src/images/shu.png" mode='scaleToFill'></image>
+<view class='userinfo-text-name'>
+<text class='name'>赵征</text>
+<text class='edit'>编辑个人信息</text>
+</view>
+</view>
+
+
+<view class='userinfo-menu'>
+<view class='userinfo-menu-item'>
+<text class='shuzi'>5个</text>
+<text class='item'>空间</text>
+</view>
+
+<view class='userinfo-menu-item'>
+<text class='shuzi'>56次</text>
+<text class='item'>打卡</text>
+</view>
+
+<view class='userinfo-menu-item'>
+<text class='shuzi'>345次</text>
+<text class='item'>互动</text>
+</view>
+
+</view>
+
+</view>
+</view>
+
+<view class='menu'>
+
+
+<view class='menu-item'>
+<view class='menu-item-text'>
+<image src="/src/images/guanlirukou.png" mode='scaleToFill'></image>
+<text>管理入口</text>
+</view>
+<view class='menu-item-icon'>
+<image src="/src/images/right.png" mode='scaleToFill'></image>
+</view>
+</view>
+
+<view class='menu-item'>
+<view class='menu-item-text'>
+<image src="/src/images/kongjian.png" mode='scaleToFill'></image>
+<text>我的空间</text>
+</view>
+<view class='menu-item-icon'>
+<image src="/src/images/right.png" mode='scaleToFill'></image>
+</view>
+</view>
+
+<view class='menu-item'>
+<view class='menu-item-text'>
+<image src="/src/images/listdaka.png" mode='scaleToFill'></image>
+<text>我的打卡</text>
+</view>
+<view class='menu-item-icon'>
+<image src="/src/images/right.png" mode='scaleToFill'></image>
+</view>
+</view>
+
+
+<view class='menu-item-last'>
+<view class='menu-item-text'>
+<image src="/src/images/hudong.png" mode='scaleToFill'></image>
+<text>我的互动</text>
+</view>
+<view class='menu-item-icon'>
+<image src="/src/images/right.png" mode='scaleToFill'></image>
+</view>
+</view>
+
+
+
+
+</view>
+
+
+<view class='copyright'>
+<text>陪伴空间</text>
+<text>提供技术支持</text>
+</view>

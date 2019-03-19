@@ -1,0 +1,9 @@
+.copyright{
+
+  margin-top: 50px;
+  text-align: center;
+  color: #cdcdcd;
+}
+.copyright text{
+  display: block;
+}

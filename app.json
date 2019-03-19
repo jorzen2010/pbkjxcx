@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/discover/discover",
+    "pages/mydaka/mydaka",
+    "pages/ucenter/ucenter",
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#d81e06",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/discover/discover",
+        "iconPath": "src/images/discover.png",
+        "selectedIconPath": "src/images/discover_select.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/mydaka/mydaka",
+        "iconPath": "src/images/daka.png",
+        "selectedIconPath": "src/images/daka_select.png",
+        "text": "打卡"
+      },
+      {
+        "pagePath": "pages/ucenter/ucenter",
+        "iconPath": "src/images/uhome.png",
+        "selectedIconPath": "src/images/uhome_select.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

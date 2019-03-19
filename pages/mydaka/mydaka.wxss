@@ -1,0 +1,123 @@
+/* pages/mydaka/mydaka.wxss */
+page{
+  background-color: #efefef;
+}
+
+.userinfo{
+  background-color: #ffffff;
+  height: 60px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.userinfo image{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.userinfo-text{
+  display: flex;
+  flex-direction: column;
+  font-size: 12pt;
+  padding-left: 10px;
+}
+
+.myspace-list{
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.myspace-more{
+  background-color: #ffffff;
+  line-height: 30px;
+  text-align: center;
+  color: #cdcdcd;
+  font-size: 12pt;
+}
+
+.daka-list{
+  margin-top: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.daka-item{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 20px 10px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #efefef;
+}
+.daka-item-user{
+  display: flex;
+  flex-direction: row;
+}
+.daka-item-user image{
+   width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  line-height: 28px;
+}
+.daka-item-usertext{
+  display: flex;
+  flex-direction: column;
+  font-size: 12pt;
+  padding-left: 10px;
+}
+
+.daka-content{
+  color: #cdcdcd;
+  font-size: 12pt;
+  padding: 10px 0px;
+}
+.daka-hudong{
+  display: flex;
+  flex-direction: row;
+}
+.daka-hudong text{
+  padding-right: 30px;
+}
+
+.space-item{
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #efefef;
+
+}
+.spaceitem-img{
+  float: left;
+  padding-right: 5px;
+ 
+}
+.spaceitem-img image{
+ height: 140px;
+  width: 100px;
+  border-radius: 10px;
+}
+.spaceitem-content{
+  padding-left: 10px;
+  float: right;
+  width: 100%;
+}
+.spaceitem-content h4{
+  font-size: 12pt;
+  font-weight: 400;
+  display: block;
+}
+.spaceitem-content .content-tags{
+  font-size: 9pt;
+}
+.spaceitem-content text{
+  display: block;
+  line-height: 30px;
+  color: #888888;
+}
+
+.spaceitem-content button{
+  margin-right: 20px;
+}

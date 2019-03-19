@@ -1,0 +1,122 @@
+<!--pages/discover/discover.wxml-->
+
+  <swiper indicator-dots='true' indicator-color='gray' indicator-active-color='white' autoplay='true'>
+    <swiper-item>
+      <image src='/src/images/shu.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/src/images/demo.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/src/images/shu.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/src/images/demo.jpg'></image>
+    </swiper-item>
+  </swiper>
+
+
+<view class='biji-container'>
+<h3>成长日记</h3><text class='title-more'>更多</text>
+<view class='biji-list'>
+<text>1、三年的陪伴成长，终于让我重新找回了自信！</text>
+<text>2、陪伴不是最长情的告白，走心的陪伴才是</text>
+<text>3、陪伴读书的感觉就像是和一个人在聊天</text>
+</view>
+</view>
+
+<view class='space-container'>
+
+<h3>推荐空间</h3><text class='title-more'>更多</text>
+<view class='space-list'>
+
+
+<view class='space-item'>
+<view class='spaceitem-img'>
+<image src="/src/images/shu.png" mode='scaleToFill'></image>
+</view>
+<view class='spaceitem-content'>
+<h4>《非暴力沟通》陪伴式成长读书会</h4>
+<text class='content-tags'>赵征  356条评论 | 39343人参与</text>
+<text>陪伴式成长读书会是由陪伴空间创始人赵征发起的陪伴式成长社群。</text>
+</view>
+</view>
+
+<view class='space-item'>
+<view class='spaceitem-img'>
+<image src="/src/images/shu.png" mode='scaleToFill'></image>
+</view>
+<view class='spaceitem-content'>
+<h4>《两性关系之镜》陪伴式成长读书会</h4>
+<text class='content-tags'>赵征  356条评论 | 39343人参与</text>
+<text>陪伴式成长读书会是由陪伴空间创始人赵征发起的陪伴式成长社群。</text>
+</view>
+</view>
+
+<view class='space-item'>
+<view class='spaceitem-img'>
+<image src="/src/images/shu.png" mode='scaleToFill'></image>
+</view>
+<view class='spaceitem-content'>
+<h4>《PET父母效能》陪伴式成长读书会</h4>
+<text class='content-tags'>赵征  356条评论 | 39343人参与</text>
+<text>陪伴式成长读书会是由陪伴空间创始人赵征发起的陪伴式成长社群。</text>
+</view>
+</view>
+
+<view class='space-item'>
+<view class='spaceitem-img'>
+<image src="/src/images/shu.png" mode='scaleToFill'></image>
+</view>
+<view class='spaceitem-content'>
+<h4>《六顶思考帽》陪伴式成长读书会</h4>
+<text class='content-tags'>赵征  356条评论 | 39343人参与</text>
+<text>陪伴式成长读书会是由陪伴空间创始人赵征发起的陪伴式成长社群。</text>
+</view>
+</view>
+
+
+
+
+</view>
+
+</view>
+
+<view class='peibanshi-container'>
+<h3>金牌陪伴师</h3><text class='title-more'>更多</text>
+<view class='peibanshi-list'>
+<view class='peibanshi-item'>
+<image src="/src/images/shu.png" mode='scaleToFill'></image>
+<h5>赵征</h5>
+</view>
+
+<view class='peibanshi-item'>
+<image src="/src/images/shu.png" mode='scaleToFill'></image>
+<h5>赵征</h5>
+</view>
+
+<view class='peibanshi-item'>
+<image src="/src/images/shu.png" mode='scaleToFill'></image>
+<h5>赵征</h5>
+</view>
+
+</view>
+
+
+</view>
+
+
+<view class='biji-container'>
+<h3>大家都在学</h3><text class='title-more'>更多</text>
+<view class='biji-list'>
+<text>1、三年的陪伴成长，终于让我重新找回了自信！</text>
+<text>2、陪伴不是最长情的告白，走心的陪伴才是</text>
+<text>3、陪伴读书的感觉就像是和一个人在聊天</text>
+<text>3、陪伴读书的感觉就像是和一个人在聊天</text>
+<text>3、陪伴读书的感觉就像是和一个人在聊天</text>
+<text>3、陪伴读书的感觉就像是和一个人在聊天</text>
+<text>3、陪伴读书的感觉就像是和一个人在聊天</text>
+<text>3、陪伴读书的感觉就像是和一个人在聊天</text>
+</view>
+</view>
+
