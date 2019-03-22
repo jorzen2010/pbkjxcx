@@ -62,5 +62,21 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  goto:function(){
+    wx.navigateTo({
+      url: '/pages/spacelist/spacelist',
+    })
+   
+  },
+  dakacontent:function(){
+    wx.navigateTo({
+      url: '/pages/dakacontent/dakacontent',
+    })
+  },
+  daka:function(){
+    wx.navigateTo({
+      url: '/pages/daka/daka',
+    })
   }
 })

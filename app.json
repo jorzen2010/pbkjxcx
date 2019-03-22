@@ -3,7 +3,11 @@
     "pages/discover/discover",
     "pages/mydaka/mydaka",
     "pages/ucenter/ucenter",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/spacelist/spacelist",
+    "pages/spacecontent/spacecontent",
+    "pages/dakacontent/dakacontent",
+    "pages/daka/daka"
   ],
   "window":{
     "backgroundTextStyle":"light",

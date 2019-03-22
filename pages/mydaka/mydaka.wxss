@@ -27,15 +27,16 @@ page{
 
 .myspace-list{
   background-color: #ffffff;
-  padding: 10px;
+  padding: 10px 10px 10px 10px;
 }
 
 .myspace-more{
   background-color: #ffffff;
-  line-height: 30px;
   text-align: center;
   color: #cdcdcd;
   font-size: 12pt;
+  line-height: 30px;
+  padding-bottom: 10px;
 }
 
 .daka-list{
@@ -86,23 +87,14 @@ page{
   display: flex;
   flex-direction: row;
   padding-bottom: 10px;
+  justify-content: space-between;
   border-bottom: 1px solid #efefef;
+  height: 50px;
 
 }
-.spaceitem-img{
-  float: left;
-  padding-right: 5px;
- 
-}
-.spaceitem-img image{
- height: 140px;
-  width: 100px;
-  border-radius: 10px;
-}
+
 .spaceitem-content{
   padding-left: 10px;
-  float: right;
-  width: 100%;
 }
 .spaceitem-content h4{
   font-size: 12pt;
@@ -117,7 +109,8 @@ page{
   line-height: 30px;
   color: #888888;
 }
-
-.spaceitem-content button{
-  margin-right: 20px;
+.spaceitem-button{
+  line-height: 50px;
 }
+
+

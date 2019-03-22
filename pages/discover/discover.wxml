@@ -31,7 +31,7 @@
 <view class='space-list'>
 
 
-<view class='space-item'>
+<view class='space-item' bindtap='spacecontent'>
 <view class='spaceitem-img'>
 <image src="/src/images/shu.png" mode='scaleToFill'></image>
 </view>
@@ -42,7 +42,7 @@
 </view>
 </view>
 
-<view class='space-item'>
+<view class='space-item' bindtap='spacecontent'>
 <view class='spaceitem-img'>
 <image src="/src/images/shu.png" mode='scaleToFill'></image>
 </view>
@@ -53,7 +53,7 @@
 </view>
 </view>
 
-<view class='space-item'>
+<view class='space-item' bindtap='spacecontent'>
 <view class='spaceitem-img'>
 <image src="/src/images/shu.png" mode='scaleToFill'></image>
 </view>
@@ -64,7 +64,7 @@
 </view>
 </view>
 
-<view class='space-item'>
+<view class='space-item' bindtap='spacecontent'>
 <view class='spaceitem-img'>
 <image src="/src/images/shu.png" mode='scaleToFill'></image>
 </view>
@@ -107,7 +107,7 @@
 
 
 <view class='biji-container'>
-<h3>大家都在学</h3><text class='title-more'>更多</text>
+<h3>大家都在打卡进步</h3><text class='title-more'>更多</text>
 <view class='biji-list'>
 <text>1、三年的陪伴成长，终于让我重新找回了自信！</text>
 <text>2、陪伴不是最长情的告白，走心的陪伴才是</text>
