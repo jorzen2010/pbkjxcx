@@ -1,0 +1,99 @@
+<!--pages/spacedaka/spacedaka.wxml-->
+<import src="/pages/template/space-top.wxml"/>
+<template is="space-top"></template>
+
+<view class='dakacontainer'>
+
+<view class='dakaitem'>
+<view class='dakaitem-top'>
+<image src="/src/images/shu.png" mode='scaleToFill'></image>
+<view class='dakaitem-name'>
+<text>赵征</text>
+<text>2019-04-04 08：45</text>
+</view>
+</view>
+<view class='dakaitem-content'>
+复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格
+</view>
+<view class='dakaitem-bottom'>
+<text>评论</text>
+<text>点赞</text>
+<text>分享</text>
+</view>
+</view>
+
+<view class='dakaitem'>
+<view class='dakaitem-top'>
+<image src="/src/images/shu.png" mode='scaleToFill'></image>
+<view class='dakaitem-name'>
+<text>赵征</text>
+<text>2019-04-04 08：45</text>
+</view>
+</view>
+<view class='dakaitem-content'>
+复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格
+</view>
+<view class='dakaitem-bottom'>
+<text>评论</text>
+<text>点赞</text>
+<text>分享</text>
+</view>
+</view>
+
+<view class='dakaitem'>
+<view class='dakaitem-top'>
+<image src="/src/images/shu.png" mode='scaleToFill'></image>
+<view class='dakaitem-name'>
+<text>赵征</text>
+<text>2019-04-04 08：45</text>
+</view>
+</view>
+<view class='dakaitem-content'>
+复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格
+</view>
+<view class='dakaitem-bottom'>
+<text>评论</text>
+<text>点赞</text>
+<text>分享</text>
+</view>
+</view>
+
+
+<view class='dakaitem'>
+<view class='dakaitem-top'>
+<image src="/src/images/shu.png" mode='scaleToFill'></image>
+<view class='dakaitem-name'>
+<text>赵征</text>
+<text>2019-04-04 08：45</text>
+</view>
+</view>
+<view class='dakaitem-content'>
+复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格
+</view>
+<view class='dakaitem-bottom'>
+<text>评论</text>
+<text>点赞</text>
+<text>分享</text>
+</view>
+</view>
+
+
+<view class='dakaitem'>
+<view class='dakaitem-top'>
+<image src="/src/images/shu.png" mode='scaleToFill'></image>
+<view class='dakaitem-name'>
+<text>赵征</text>
+<text>2019-04-04 08：45</text>
+</view>
+</view>
+<view class='dakaitem-content'>
+复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格复古风格
+</view>
+<view class='dakaitem-bottom'>
+<text>评论</text>
+<text>点赞</text>
+<text>分享</text>
+</view>
+</view>
+
+</view>

@@ -1,0 +1,19 @@
+/* pages/spacemulu/spacemulu.wxss */
+@import "/pages/template/space-top.wxss";
+.spacemulu{
+  padding: 10px;
+  background-color: #ffffff;
+}
+.muluitem{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 40px;
+  align-items: center;
+
+  color: #cdcdcd;
+}
+.muluitem image{
+  height: 25px;
+  width: 25px;
+}

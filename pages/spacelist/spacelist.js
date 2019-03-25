@@ -62,5 +62,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  spaceinfo:function(){
+    wx.navigateTo({
+      url: '/pages/spaceinfo/spaceinfo',
+    })
   }
 })

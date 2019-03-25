@@ -1,0 +1,30 @@
+<!--pages/spacemulu/spacemulu.wxml-->
+<import src="/pages/template/space-top.wxml"/>
+<template is="space-top"></template>
+
+<view class='spacemulu'>
+<view class='muluitem'>
+<text>1、你是什么意思呢，我不知道啊</text>
+<image src="/src/images/right.png" mode='scaleToFill'></image>
+</view>
+
+<view class='muluitem'>
+<text>1、你是什么意思呢，我不知道啊</text>
+<image src="/src/images/right.png" mode='scaleToFill'></image>
+</view>
+
+<view class='muluitem'>
+<text>1、你是什么意思呢，我不知道啊</text>
+<image src="/src/images/right.png" mode='scaleToFill'></image>
+</view>
+
+<view class='muluitem'>
+<text>1、你是什么意思呢，我不知道啊</text>
+<image src="/src/images/right.png" mode='scaleToFill'></image>
+</view>
+
+<view class='muluitem'>
+<text>1、你是什么意思呢，我不知道啊</text>
+<image src="/src/images/right.png" mode='scaleToFill'></image>
+</view>
+</view>

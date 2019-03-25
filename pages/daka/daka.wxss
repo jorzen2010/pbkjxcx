@@ -1,1 +1,51 @@
 /* pages/daka/daka.wxss */
+@import "/pages/template/space-top.wxss";
+page{
+  background-color: #efefef;
+}
+
+.dakayaoqiu{
+  margin: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+}
+.zhedie{
+  text-align: center;
+}
+.zhankai{
+  text-align: center;
+}
+.dakayaoqiumunu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 40px;
+}
+.dakasection{
+  display: flex;
+  flex-direction: column;
+}
+.dakasection-top{
+  margin: 10px 10px 0px 10px;
+  background-color: #ffffff;
+  padding: 10px 10px 5px 10px;
+}
+.dakasection-textarea{
+  margin: 0px 10px 10px 10px;
+  background-color: #ffffff;
+  height: 280px;
+  padding: 10px;
+}
+.dakasection-textarea textarea{
+  width: 100%;
+}
+.dakasection-button{
+  margin: 10px;
+}
+.dakasection-button button{
+  background-color: #0000ff;
+  border-radius: 50px;
+}

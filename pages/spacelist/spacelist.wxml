@@ -1,6 +1,6 @@
 <!--pages/spacelist/spacelist.wxml-->
 <view class='spaceitem'>
-<view class='itemtop'>
+<view class='itemtop' bindtap='spaceinfo'>
 <text class='title'>《非暴力沟通》陪伴式成长读书会</text>
 <text class='smalltitle'>已陪伴打卡78次，陪伴互动89条</text>
 </view>
@@ -13,7 +13,7 @@
 </view>
 
 <view class='spaceitem'>
-<view class='itemtop'>
+<view class='itemtop' bindtap='spaceinfo'>
 <text class='title'>《非暴力沟通》陪伴式成长读书会</text>
 <text class='smalltitle'>已陪伴打卡78次，陪伴互动89条</text>
 </view>
@@ -26,7 +26,7 @@
 </view>
 
 <view class='spaceitem'>
-<view class='itemtop'>
+<view class='itemtop' bindtap='spaceinfo'>
 <text class='title'>《非暴力沟通》陪伴式成长读书会</text>
 <text class='smalltitle'>已陪伴打卡78次，陪伴互动89条</text>
 </view>
@@ -39,7 +39,7 @@
 </view>
 
 <view class='spaceitem'>
-<view class='itemtop'>
+<view class='itemtop' bindtap='spaceinfo'>
 <text class='title'>《非暴力沟通》陪伴式成长读书会</text>
 <text class='smalltitle'>已陪伴打卡78次，陪伴互动89条</text>
 </view>

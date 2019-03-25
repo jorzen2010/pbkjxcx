@@ -6,13 +6,23 @@ Page({
    */
   data: {
 
+    dakayaoqiucontent: '这里的内容应该是有视频这里的内容应该是有音频这里的内容应该是有视频这里的内容应该是有音频这里的内容应该是有视频这里的内容应该是有音频这里的内容应该是有视频这里的内容应该是有音频这里的内容应该是有视频这里的内容应该是有音频这里的内容应该是有视频这里的内容应该是有音频这里的内容应该是有视频这里的内容应该是有音频这里的内容应该是有视频这里的内容应该是有音频这里的内容应该是有视频这里的内容应该是有音频',
+    zhedieyaoqiucontent:'',
+    xianshiyaoiqucontent:'',
+    zhedianbtn:'block',
+    zhankaibtn:'none',
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var _this=this;
+    _this.setData({ 
+      xianshiyaoiqucontent: _this.data.dakayaoqiucontent,
+      zhedieyaoqiucontent: _this.data.dakayaoqiucontent.substring(0, 50)
+      });
   },
 
   /**
@@ -62,5 +72,36 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  zhedie:function(){
+    var _this=this;
+    _this.setData({ 
+      xianshiyaoiqucontent: _this.data.zhedieyaoqiucontent,
+      zhedianbtn: 'none',
+      zhankaibtn: 'block'
+    });
+  },
+  zhankai: function () {
+    var _this = this;
+    _this.setData({ 
+      xianshiyaoiqucontent: _this.data.dakayaoqiucontent,
+      zhedianbtn: 'block',
+      zhankaibtn: 'none'
+    });
+  },
+  spacedaka: function () {
+    wx.navigateTo({
+      url: '/pages/spacedaka/spacedaka',
+    })
+  },
+  spacemulu: function () {
+    wx.navigateTo({
+      url: '/pages/spacemulu/spacemulu',
+    })
+  },
+  spaceinfo: function () {
+    wx.navigateTo({
+      url: '/pages/spaceinfo/spaceinfo',
+    })
+  },
 })

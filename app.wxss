@@ -1,3 +1,6 @@
+page{
+  background-color: #efefef;
+}
 .copyright{
 
   margin-top: 50px;

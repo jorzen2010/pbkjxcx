@@ -1,4 +1,24 @@
-<!--pages/daka/daka.wxml-->
-<view class="section">
-  <textarea bindblur="bindTextAreaBlur" auto-height placeholder="自动变高" />
+<import src="/pages/template/space-top.wxml"/>
+<template is="space-top"></template>
+
+<view class='dakayaoqiu'>
+<view class='dakayaoqiumunu'>
+<text>前一天</text>
+<text>第9天</text>
+<text>后一天</text>
+</view>
+<text>{{xianshiyaoiqucontent}}</text>
+<text bindtap='zhedie' style='display:{{zhedianbtn}}' class='zhedie'>折叠</text>
+<text bindtap='zhankai' style='display:{{zhankaibtn}}' class='zhankai'>展开</text>
+</view>
+<view class='dakasection'>
+<view class='dakasection-top'>
+<text>"0/500</text>
+</view>
+<view class='dakasection-textarea'>
+<textarea  />
+</view>
+<view class='dakasection-button'>
+<button type='primary'>提交打卡</button>
+</view>
 </view>

@@ -17,21 +17,21 @@
 
 
 <view class='biji-container'>
-<h3>成长日记</h3><text class='title-more'>更多</text>
+<h3>陪伴日记</h3><text class='title-more'>更多</text>
 <view class='biji-list'>
-<text>1、三年的陪伴成长，终于让我重新找回了自信！</text>
-<text>2、陪伴不是最长情的告白，走心的陪伴才是</text>
-<text>3、陪伴读书的感觉就像是和一个人在聊天</text>
+<text bindtap='dakacontent'>1、三年的陪伴成长，终于让我重新找回了自信！</text>
+<text bindtap='dakacontent'>2、陪伴不是最长情的告白，走心的陪伴才是</text>
+<text bindtap='dakacontent'>3、陪伴读书的感觉就像是和一个人在聊天</text>
 </view>
 </view>
 
 <view class='space-container'>
 
-<h3>推荐空间</h3><text class='title-more'>更多</text>
+<h3>推荐空间</h3><text class='title-more'  bindtap='spacelist'>更多</text>
 <view class='space-list'>
 
 
-<view class='space-item' bindtap='spacecontent'>
+<view class='space-item' bindtap='spaceinfo'>
 <view class='spaceitem-img'>
 <image src="/src/images/shu.png" mode='scaleToFill'></image>
 </view>
@@ -42,7 +42,7 @@
 </view>
 </view>
 
-<view class='space-item' bindtap='spacecontent'>
+<view class='space-item' bindtap='spaceinfo'>
 <view class='spaceitem-img'>
 <image src="/src/images/shu.png" mode='scaleToFill'></image>
 </view>
@@ -53,7 +53,7 @@
 </view>
 </view>
 
-<view class='space-item' bindtap='spacecontent'>
+<view class='space-item' bindtap='spaceinfo'>
 <view class='spaceitem-img'>
 <image src="/src/images/shu.png" mode='scaleToFill'></image>
 </view>
@@ -64,7 +64,7 @@
 </view>
 </view>
 
-<view class='space-item' bindtap='spacecontent'>
+<view class='space-item' bindtap='spaceinfo'>
 <view class='spaceitem-img'>
 <image src="/src/images/shu.png" mode='scaleToFill'></image>
 </view>
