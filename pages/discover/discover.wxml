@@ -31,7 +31,7 @@
 <view class='space-list'>
 
 
-<view class='space-item' bindtap='spaceinfo'>
+<view class='space-item' bindtap='spacetest'>
 <view class='spaceitem-img'>
 <image src="/src/images/shu.png" mode='scaleToFill'></image>
 </view>

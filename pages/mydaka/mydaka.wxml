@@ -12,8 +12,8 @@
 
 <view class='space-item' bindtap='daka'>
 <view class='spaceitem-content'>
-<h4>《非暴力沟通》陪伴式成长读书会</h4>
-<text class='content-tags'>赵征 ： 356条评论 | 39343人参与</text> 
+<h4>《非读书会</h4>
+<text class='content-tags'>赵征 </text> 
 </view>
 <view class='spaceitem-button'>
 <button size='mini' type='primary'>打卡</button>

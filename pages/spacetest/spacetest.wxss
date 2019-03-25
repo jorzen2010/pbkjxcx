@@ -1,0 +1,26 @@
+.spaceinfo{
+  display: flex;
+  flex-direction: column;
+  background-color: #1296db;
+  padding: 10px;
+}
+.spacetitle{
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 50px;
+}
+.spaceinfo button{
+  margin-top: 10px;
+  background-color: #0000dd;
+  color: #ffffff;
+  align-self: flex-start;
+}
+.spacemenu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #1296db;
+  color: #ffffff;
+  border-top: 1px solid #ffffff;
+}

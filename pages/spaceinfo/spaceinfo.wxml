@@ -7,11 +7,9 @@
 <view class='infomenu'>
 <view class='menufirst'>
 <image src="/src/images/shouye.png" mode='scaleToFill'></image>
-首页
+<text>首页</text>
 </view>
 <view class='menu-btn'>
-立刻进入
+<text>我要加入</text>
 </view>
-
-
 </view>

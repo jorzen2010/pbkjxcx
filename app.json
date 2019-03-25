@@ -10,7 +10,8 @@
     "pages/daka/daka",
     "pages/spacedaka/spacedaka",
     "pages/spacemulu/spacemulu",
-    "pages/spaceinfo/spaceinfo"
+    "pages/spaceinfo/spaceinfo",
+    "pages/spacetest/spacetest"
   ],
   "window":{
     "backgroundTextStyle":"light",

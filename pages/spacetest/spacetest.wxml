@@ -1,0 +1,29 @@
+<view class='spaceinfo'>
+<view>
+<text class='spacetitle'>非暴力沟通陪伴式成长读书会</text>
+</view>
+<view>
+<button type='primary' size='mini'>陪伴师:赵征</button>
+</view>
+</view>
+<view class='spacemenu'>
+<text bindtap='spaceinfo'>介绍</text>
+<text bindtap='spacemulu'>目录</text>
+<text bindtap='spacedaka'>打卡</text>
+<text bindtap='onShareAppMessage'>分享</text>
+</view>
+
+  <swiper>
+    <swiper-item>
+     介绍内容
+    </swiper-item>
+    <swiper-item>
+      目录内容
+    </swiper-item>
+    <swiper-item>
+     打卡内容
+    </swiper-item>
+    <swiper-item>
+     分享内容
+    </swiper-item>
+  </swiper>

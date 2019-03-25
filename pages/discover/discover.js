@@ -98,6 +98,11 @@ Page({
       url: '/pages/spaceinfo/spaceinfo',
     })
   },
+  spacetest: function () {
+    wx.navigateTo({
+      url: '/pages/spacetest/spacetest',
+    })
+  },
   dakacontent:function(){
     wx.navigateTo({
       url: '/pages/dakacontent/dakacontent',

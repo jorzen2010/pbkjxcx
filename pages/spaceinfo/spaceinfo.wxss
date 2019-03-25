@@ -3,27 +3,21 @@
 
 .infocontent{
   background-color: #ffffff;
-  padding: 10px;
+  padding: 10px 10px 80px 10px;
   line-height: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 180px;
 }
 .infomenu{
   position:fixed;
   bottom:0; 
   height: 50px;
   line-height: 50px;
+  background-color: #faa159;
   width: 100%;
-  display: flex;
-  flex-direction: row;
 }
-.infomenu text{
-  padding: 0px 10px;
-  color: #ffffff;
-}
+
 .menufirst{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  
   height: 50px;
   line-height: 50px; 
   color: #ffffff;
@@ -31,14 +25,17 @@
   background-color: #1296db;
   padding: 0px 10px;
   width: 60px;
+  float: left;
 }
 .menufirst image{
-  height: 25px;
-  width: 25px;
+  height: 23px;
+  width: 23px;
+  vertical-align: middle;
 }
 .menu-btn{
   background-color: #faa159;
   color: #ffffff;
   padding: 0px 10px;
+  width: 100%;
   text-align: center;
 }
