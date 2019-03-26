@@ -1,37 +1,35 @@
 // pages/discover/discover.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    toView: 'yellow',
-    scrollLeft: 0,
-    //滚动的数组
-    scrolls: [
-      {
-        name: '黄色',
-        tag: 'yellow',
-      },
-      {
-        name: '绿色',
-        tag: 'green',
-      },
-      {
-        name: '红色',
-        tag: 'red',
-      },
-    ],
+    pagecount:0,
+    bijis:[]
 
   },
-  scroll: function (e) {
-    console.log(e)
-  },
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var _this=this;
+    wx.request({
+      url: app.globalData.apiUrl +'xiaochengxu/getbiji',
+      headers: {
+            'Content-Type': 'application/json'
+      },
+      success:function(res){
+        _this.setData({
+          pagecount: res.data.pagecount,
+          bijis: res.data.dakas
+        });
+
+      }
+    })
   
   },
 

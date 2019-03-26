@@ -19,9 +19,9 @@
 <view class='biji-container'>
 <h3>陪伴日记</h3><text class='title-more'>更多</text>
 <view class='biji-list'>
-<text bindtap='dakacontent'>1、三年的陪伴成长，终于让我重新找回了自信！</text>
-<text bindtap='dakacontent'>2、陪伴不是最长情的告白，走心的陪伴才是</text>
-<text bindtap='dakacontent'>3、陪伴读书的感觉就像是和一个人在聊天</text>
+<text bindtap='dakacontent'>1、{{bijis[0].DakaTitle}}！</text>
+<text bindtap='dakacontent'>2、{{bijis[1].DakaTitle}}</text>
+<text bindtap='dakacontent'>3、{{bijis[2].DakaTitle}}</text>
 </view>
 </view>
 
