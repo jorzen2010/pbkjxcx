@@ -17,6 +17,7 @@ Page({
    */
   onLoad: function (options) {
     var _this=this;
+    
     wx.request({
       url: app.globalData.apiUrl +'xiaochengxu/getbijis?count=3',
       headers: {
