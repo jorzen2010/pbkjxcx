@@ -1,10 +1,18 @@
 // pages/dakacontent/dakacontent.js
+const app = getApp();
+var Wxparse = require("../../utils/wxParse/wxParse.js");
+var util = require("../../utils/common.js");
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    dakaid:0,
+    daka:{},
+    article_content:'',
+    dianzans:[],
+    pingluns:[]
 
   },
 
@@ -12,6 +20,47 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var _this = this;
+    _this.setData({
+      dakaid:options.id,
+    })
+    wx.request({
+      url: app.globalData.apiUrl + 'xiaochengxu/GetBijiById?id='+_this.data.dakaid,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        res.data.DakaTime = util.formatDateStamp(res.data.DakaTime, "short");
+        _this.setData({
+          daka: res.data,
+          
+        });
+        Wxparse.wxParse('article_content', 'html', res.data.DakaContent, _this, 5)
+      }
+    });
+    wx.request({
+      url: app.globalData.apiUrl + 'xiaochengxu/GetDianzanByDakaId?id=' + _this.data.dakaid+'&count=100',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        _this.setData({
+          dianzans: res.data.dianzans,
+
+        });
+      }
+    });
+    wx.request({
+      url: app.globalData.apiUrl + 'xiaochengxu/GetPinglunByDakaId?id=' + _this.data.dakaid + '&count=100',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        _this.setData({
+          pingluns: res.data.pingluns,
+        });
+      }
+    });
 
   },
 

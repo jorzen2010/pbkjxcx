@@ -6,8 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    pagecount:0,
-    bijis:[]
+    bijis:[],
+    dakas:[]
 
   },
 
@@ -18,14 +18,26 @@ Page({
   onLoad: function (options) {
     var _this=this;
     wx.request({
-      url: app.globalData.apiUrl +'xiaochengxu/getbiji',
+      url: app.globalData.apiUrl +'xiaochengxu/getbijis?count=3',
       headers: {
             'Content-Type': 'application/json'
       },
       success:function(res){
         _this.setData({
-          pagecount: res.data.pagecount,
           bijis: res.data.dakas
+        });
+
+      }
+    })
+
+    wx.request({
+      url: app.globalData.apiUrl + 'xiaochengxu/getbijis?count=10',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        _this.setData({
+          dakas: res.data.dakas
         });
 
       }
@@ -101,9 +113,9 @@ Page({
       url: '/pages/spacetest/spacetest',
     })
   },
-  dakacontent:function(){
+  dakacontent: function (event){
     wx.navigateTo({
-      url: '/pages/dakacontent/dakacontent',
+      url: '/pages/dakacontent/dakacontent?id=' + event.currentTarget.dataset.id,
     })
   }
 })

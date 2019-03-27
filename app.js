@@ -35,6 +35,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    apiUrl:'http://localhost:1220/'
+    //apiUrl:'http://localhost:1220/',
+    apiUrl: 'http://peiban.zzd123.com/'
   }
 })

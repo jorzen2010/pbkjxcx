@@ -1,4 +1,8 @@
 /* pages/dakacontent/dakacontent.wxss */
+ @import "../../utils/wxParse/wxParse.wxss"; 
+ page{
+   background-color: #ffffff;
+ }
 .dakacontent{
   display: flex;
   flex-direction: column;
@@ -28,4 +32,9 @@
   line-height: 50px;
   background-color:red;
   color: #ffffff;
+}
+.dianzancontent{
+  color: red;
+   font-size: 14pt;
+  font-weight: 500;
 }
