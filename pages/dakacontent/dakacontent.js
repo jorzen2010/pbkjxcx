@@ -24,6 +24,8 @@ Page({
     _this.setData({
       dakaid:options.id,
     })
+
+    
     wx.request({
       url: app.globalData.apiUrl + 'xiaochengxu/GetBijiById?id='+_this.data.dakaid,
       headers: {

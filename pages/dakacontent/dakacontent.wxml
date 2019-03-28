@@ -12,7 +12,7 @@
 <text>{{item.DianzanRen}}</text>
 </block>
 </view>
-<view  class='dianzancontent'>
+<view  class='pingluncontent'>
 <block wx:for='{{pingluns}}' wx:key='key'>
 <text>{{item.PinglunContent}}</text>
 </block>

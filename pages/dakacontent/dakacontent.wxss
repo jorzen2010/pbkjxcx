@@ -35,6 +35,10 @@
 }
 .dianzancontent{
   color: red;
-   font-size: 14pt;
+  font-size: 14pt;
   font-weight: 500;
+}
+.pingluncontent{
+  display: flex;
+  flex-direction: column;
 }
