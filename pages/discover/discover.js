@@ -1,5 +1,6 @@
 // pages/discover/discover.js
 const app = getApp();
+const peiban = require('../../src/js/peiban.js');
 Page({
 
   /**
@@ -10,39 +11,42 @@ Page({
     dakas:[]
 
   },
-
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var _this=this;
+
+    // peiban.getbijisByCount(3)
+    // .then(function (data) {
+
+    // })
     
-    wx.request({
-      url: app.globalData.apiUrl +'xiaochengxu/getbijis?count=3',
-      headers: {
-            'Content-Type': 'application/json'
-      },
-      success:function(res){
-        _this.setData({
-          bijis: res.data.dakas
-        });
+    // wx.request({
+    //   url: app.globalData.apiUrl +'xiaochengxu/getbijis?count=3',
+    //   headers: {
+    //         'Content-Type': 'application/json'
+    //   },
+    //   success:function(res){
+    //     _this.setData({
+    //       bijis: res.data.dakas
+    //     });
 
-      }
-    })
+    //   }
+    // })
 
-    wx.request({
-      url: app.globalData.apiUrl + 'xiaochengxu/getbijis?count=10',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      success: function (res) {
-        _this.setData({
-          dakas: res.data.dakas
-        });
+    // wx.request({
+    //   url: app.globalData.apiUrl + 'xiaochengxu/getbijis?count=10',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   success: function (res) {
+    //     _this.setData({
+    //       dakas: res.data.dakas
+    //     });
 
-      }
-    })
+    //   }
+    // })
   
   },
 
