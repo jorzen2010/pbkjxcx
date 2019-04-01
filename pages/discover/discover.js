@@ -1,6 +1,6 @@
 // pages/discover/discover.js
 const app = getApp();
-const peiban = require('../../src/js/peiban.js');
+const peiban = require('../../utils/peiban.js');
 Page({
 
   /**
@@ -8,45 +8,41 @@ Page({
    */
   data: {
     bijis:[],
-    dakas:[]
+    dakas:[],
+    userinfo:null,
 
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var _this=this;
+    var _this=this; 
+    //这是一个回调函数的判断
+    app.userInfoReadyCallback=function(){
 
-    // peiban.getbijisByCount(3)
-    // .then(function (data) {
+      console.log(app.globalData.userInfo);
+      peiban.getSpaceByUid(app.globalData.userInfo.Id,0)
+      .then(function (data){
+      console.log(data);
+      })
 
-    // })
+    };
+
+    peiban.getbijisByCount(3)
+    .then(function (data) {
+        _this.setData({
+          bijis: data.dakas
+        });
+    });
+
+    peiban.getbijisByCount(5)
+      .then(function (data) {
+        _this.setData({
+          dakas: data.dakas
+        });
+      });
     
-    // wx.request({
-    //   url: app.globalData.apiUrl +'xiaochengxu/getbijis?count=3',
-    //   headers: {
-    //         'Content-Type': 'application/json'
-    //   },
-    //   success:function(res){
-    //     _this.setData({
-    //       bijis: res.data.dakas
-    //     });
-
-    //   }
-    // })
-
-    // wx.request({
-    //   url: app.globalData.apiUrl + 'xiaochengxu/getbijis?count=10',
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   success: function (res) {
-    //     _this.setData({
-    //       dakas: res.data.dakas
-    //     });
-
-    //   }
-    // })
+    
   
   },
 
@@ -54,7 +50,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
   },
 
   /**

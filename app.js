@@ -1,5 +1,4 @@
 //app.js
-const peiban = require('src/js/peiban.js');
 App({
   onLaunch: function () {
 
@@ -18,20 +17,23 @@ App({
             'Content-Type': 'application/json'
           },
           success: function (res) {
-            console.log('获取到的信息：'+res.data);
-           
-             _this.globalData.openid = res.data.openid;
-             _this.globalData.unionid = res.data.unionid;
-             _this.globalData.session_key = res.data.session_key;
-            console.log(_this.globalData.unionid);
-
+            console.log('获取到的openid信息：'+res.data.openid);
+            _this.globalData.loginInfo=res.data;
+            if (_this.loginInfoReadyCallback) {
+              _this.loginInfoReadyCallback(res)
+            }
             wx.request({
               url: _this.globalData.apiUrl + "xiaochengxu/GetuserinfoByunionid?unionid=" + res.data.unionid,
               headers: {
                 'Content-Type': 'application/json'
               },
               success: function (res) {
-                _this.globalData.userInfo = res.data;
+                
+               _this.globalData.userInfo = res.data;
+               //增加一个回调函数，保证已经赋值才能使用
+              if (_this.userInfoReadyCallback) {
+                _this.userInfoReadyCallback(res)
+              }
                 console.log(_this.globalData.userInfo);
               },
             });
@@ -64,10 +66,11 @@ App({
   },
   globalData: {
     userInfo: null,
+    loginInfo:null,
     openid:'',
     unionid:'',
     session_key:'',
     //apiUrl:'http://localhost:1220/',
-    apiUrl: 'http://peiban.zzd123.com/'
+    apiUrl: 'https://peiban.zzd123.com/'
   }
 })
