@@ -18,7 +18,7 @@ App({
             'Content-Type': 'application/json'
           },
           success: function (res) {
-            console.log(res.data);
+            console.log('获取到的信息：'+res.data);
            
              _this.globalData.openid = res.data.openid;
              _this.globalData.unionid = res.data.unionid;
