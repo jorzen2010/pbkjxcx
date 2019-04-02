@@ -29,11 +29,40 @@ const getSpaceByUid = (uid,count) => new Promise((resolve) => {
   });
 });
 
+//根据登陆信息获取空间列表
+const GetSpaceListByCount = (count) => new Promise((resolve) => {
+  wx.request({
+    url: app.globalData.apiUrl + 'xiaochengxu/GetSpaceListByCount?count=' + count,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    success: function (res) {
+
+      resolve(res.data);
+    }
+  });
+});
+
+const getBookById = (id) => new Promise((resolve) => {
+  wx.request({
+    url: app.globalData.apiUrl + 'xiaochengxu/getBookById?id=' + id,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    success: function (res) {
+
+      resolve(res.data);
+    }
+  });
+});
+
 
 
 //暴露接口给外部使用
 module.exports = {
   getbijisByCount: getbijisByCount,
-  getSpaceByUid: getSpaceByUid
+  getSpaceByUid: getSpaceByUid,
+  GetSpaceListByCount: GetSpaceListByCount,
+  getBookById: getBookById
 }
 

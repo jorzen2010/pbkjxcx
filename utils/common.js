@@ -77,10 +77,14 @@ function sec_to_time(s) {
   }
   return t;
 }
-
+function deleteHtmlTag(str) {
+  str = str.replace(/<[^>]+>|&[^>]+;/g, "").trim();//去掉所有的html标签和&nbsp;之类的特殊符合
+  return str;
+} 
 module.exports = {
   formatTime: formatTime,
   formatDateStamp: formatDateStamp,
   formatDate: formatDate,
-  sec_to_time: sec_to_time
+  sec_to_time: sec_to_time,
+  deleteHtmlTag: deleteHtmlTag
 }

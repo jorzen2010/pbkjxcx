@@ -1,6 +1,7 @@
 // pages/discover/discover.js
 const app = getApp();
 const peiban = require('../../utils/peiban.js');
+var util = require("../../utils/common.js");
 Page({
 
   /**
@@ -11,6 +12,7 @@ Page({
     dakas:[],
     userinfo:null,
     spaceslist:[],
+    booklist:[],
 
   },
   /**
@@ -21,14 +23,21 @@ Page({
     //这是一个回调函数的判断
     app.userInfoReadyCallback=function(){
 
-      console.log(app.globalData.userInfo);
-      // peiban.getSpaceByUid(app.globalData.userInfo.Id,0)
-      // .then(function (data){
-      //   _this.setData({
-      //     spaceslist:data.spaces
-      //   })
-      // console.log(data);
-      // })
+     // console.log(app.globalData.userInfo);
+      peiban.GetSpaceListByCount(3)
+      .then(function (data){
+        _this.setData({
+          spaceslist:data.spaces
+        });
+        Promise.all(data.spaces.map(item => peiban.getBookById(item.ProductBook)))
+          .then(function (result) {
+            _this.setData({
+              booklist: result
+            });
+             console.log(result);
+          });
+      console.log(data);
+      })
 
     };
 

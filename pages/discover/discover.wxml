@@ -1,5 +1,5 @@
 <!--pages/discover/discover.wxml-->
-
+<wxs src="../../wxs/common.wxs" module="tools" />
   <swiper indicator-dots='true' indicator-color='gray' indicator-active-color='white' autoplay='true'>
     <swiper-item>
       <image src='/src/images/shu.png'></image>
@@ -37,14 +37,14 @@
 <image src="/src/images/shu.png" mode='scaleToFill'></image>
 </view>
 <view class='spaceitem-content'>
-<h4>《非暴力沟通》陪伴式成长读书会</h4>
+<h4>{{index}}、{{item.Title}}</h4>
 <text class='content-tags'>赵征  356条评论 | 39343人参与</text>
-<text>陪伴式成长读书会是由陪伴空间创始人赵征发起的陪伴式成长社群。</text>
+<text>{{tools.sub(booklist[index].Content,50)}}</text>
 </view>
 </view>
 </block>
 
-
+<!-- 
 <view class='space-item' bindtap='spacetest'>
 <view class='spaceitem-img'>
 <image src="/src/images/shu.png" mode='scaleToFill'></image>
@@ -87,7 +87,7 @@
 <text class='content-tags'>赵征  356条评论 | 39343人参与</text>
 <text>陪伴式成长读书会是由陪伴空间创始人赵征发起的陪伴式成长社群。</text>
 </view>
-</view>
+</view> -->
 
 
 

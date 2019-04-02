@@ -1,0 +1,16 @@
+
+var sub = function (val, count) { 
+  if (val.length == 0 || val == undefined) 
+  {
+     return; 
+     } 
+  if (val.length > count) 
+  {
+     return val.substring(0, count) + "..."; 
+  } else {
+     return val; 
+     } }
+
+module.exports = {
+  sub:sub
+}
