@@ -10,6 +10,7 @@ Page({
     bijis:[],
     dakas:[],
     userinfo:null,
+    spaceslist:[],
 
   },
   /**
@@ -21,10 +22,13 @@ Page({
     app.userInfoReadyCallback=function(){
 
       console.log(app.globalData.userInfo);
-      peiban.getSpaceByUid(app.globalData.userInfo.Id,0)
-      .then(function (data){
-      console.log(data);
-      })
+      // peiban.getSpaceByUid(app.globalData.userInfo.Id,0)
+      // .then(function (data){
+      //   _this.setData({
+      //     spaceslist:data.spaces
+      //   })
+      // console.log(data);
+      // })
 
     };
 

@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/discover/discover",
     "pages/mydaka/mydaka",
     "pages/ucenter/ucenter",
@@ -13,11 +13,11 @@
     "pages/spaceinfo/spaceinfo",
     "pages/spacetest/spacetest"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#cdcdcd",
@@ -44,5 +44,6 @@
         "text": "我的"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
