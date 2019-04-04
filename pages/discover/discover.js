@@ -29,13 +29,6 @@ Page({
         _this.setData({
           spaceslist:data.spaces
         });
-        Promise.all(data.spaces.map(item => peiban.getBookById(item.ProductBook)))
-          .then(function (result) {
-            _this.setData({
-              booklist: result
-            });
-             console.log(result);
-          });
       console.log(data);
       })
 
@@ -119,11 +112,6 @@ Page({
   spaceinfo:function(){
     wx.navigateTo({
       url: '/pages/spaceinfo/spaceinfo',
-    })
-  },
-  spacetest: function () {
-    wx.navigateTo({
-      url: '/pages/spacetest/spacetest',
     })
   },
   dakacontent: function (event){

@@ -28,14 +28,27 @@ App({
                 'Content-Type': 'application/json'
               },
               success: function (res) {
+                if (res.data.MessageStatus=='false')
+                {
+                  wx.redirectTo({
+                    url: '/pages/weizhuce/weizhuce',
+                  })               
+
+                }
+                else
+                { 
+                  _this.globalData.userInfo = res.data;
+                  if (_this.userInfoReadyCallback) {
+                    _this.userInfoReadyCallback(res)
+                  }
+                  console.log(_this.globalData.userInfo);
+                }
+                }
+
                 
-               _this.globalData.userInfo = res.data;
+               
                //增加一个回调函数，保证已经赋值才能使用
-              if (_this.userInfoReadyCallback) {
-                _this.userInfoReadyCallback(res)
-              }
-                console.log(_this.globalData.userInfo);
-              },
+              
             });
           
           }

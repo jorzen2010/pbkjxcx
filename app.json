@@ -11,7 +11,7 @@
     "pages/spacedaka/spacedaka",
     "pages/spacemulu/spacemulu",
     "pages/spaceinfo/spaceinfo",
-    "pages/spacetest/spacetest"
+    "pages/weizhuce/weizhuce"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -44,5 +44,6 @@
         "text": "我的"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

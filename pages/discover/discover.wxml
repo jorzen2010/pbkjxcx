@@ -32,14 +32,14 @@
 
 
 <block wx:for='{{spaceslist}}' wx:key='key'>
-<view class='space-item' bindtap='spacetest'>
+<view class='space-item' bindtap='spaceinfo'>
 <view class='spaceitem-img'>
 <image src="/src/images/shu.png" mode='scaleToFill'></image>
 </view>
 <view class='spaceitem-content'>
-<h4>{{index}}、{{item.Title}}</h4>
+<h4>{{item.Title}}</h4>
 <text class='content-tags'>赵征  356条评论 | 39343人参与</text>
-<text>{{tools.sub(booklist[index].Content,50)}}</text>
+<text>{{item.Info}}</text>
 </view>
 </view>
 </block>
@@ -96,7 +96,7 @@
 
 </view>
 
-<view class='peibanshi-container'>
+<!-- <view class='peibanshi-container'>
 <h3>金牌陪伴师</h3><text class='title-more'>更多</text>
 <view class='peibanshi-list'>
 <view class='peibanshi-item'>
@@ -117,7 +117,7 @@
 </view>
 
 
-</view>
+</view> -->
 
 
 <view class='biji-container'>

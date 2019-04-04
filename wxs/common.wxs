@@ -1,4 +1,3 @@
-
 var sub = function (val, count) { 
   if (val.length == 0 || val == undefined) 
   {

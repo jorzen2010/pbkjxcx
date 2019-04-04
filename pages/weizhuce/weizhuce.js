@@ -1,4 +1,4 @@
-// pages/spacetest/spacetest.js
+// pages/weizhuce/weizhuce.js
 Page({
 
   /**

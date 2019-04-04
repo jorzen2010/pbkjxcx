@@ -37,6 +37,7 @@ Page({
           daka: res.data,
           
         });
+        
         Wxparse.wxParse('article_content', 'html', res.data.DakaContent, _this, 5)
       }
     });
