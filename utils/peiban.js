@@ -84,6 +84,19 @@ const getRenwuListByBookId = (id) => new Promise((resolve) => {
   });
 });
 
+const getDakaListBySpaceId = (id) => new Promise((resolve) => {
+  wx.request({
+    url: app.globalData.apiUrl + 'xiaochengxu/GetBijiBySid?sid=' + id,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    success: function (res) {
+
+      resolve(res.data);
+    }
+  });
+});
+
 
 
 //暴露接口给外部使用
@@ -93,6 +106,7 @@ module.exports = {
   GetSpaceListByCount: GetSpaceListByCount,
   getBookById: getBookById,
   getSpaceById: getSpaceById,
-  getRenwuListByBookId: getRenwuListByBookId
+  getRenwuListByBookId: getRenwuListByBookId,
+  getDakaListBySpaceId: getDakaListBySpaceId
 }
 

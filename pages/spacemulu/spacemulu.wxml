@@ -2,7 +2,7 @@
 
 <view class='spaceinfo'>
 <view>
-<text class='spacetitle'>{{data}}</text>
+<text class='spacetitle'>{{space.Title}}</text>
 </view>
 <view>
 <button type='primary' size='mini'>陪伴师:赵征</button>
@@ -19,7 +19,7 @@
 
 <block wx:for='{{mulu}}' wx:key='key'>
 <view class='muluitem'>
-<text>1、{{item.Title}}</text>
+<text>{{index+1}}、{{item.Title}}</text>
 <image src="/src/images/right.png" mode='scaleToFill'></image>
 </view>
 </block>

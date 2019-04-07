@@ -1,10 +1,14 @@
 // pages/spacedaka/spacedaka.js
+const app = getApp();
+const peiban = require('../../utils/peiban.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    space:{},
+    dakalist:[]
 
   },
 
@@ -12,6 +16,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var _this = this;
+    peiban.getSpaceById(_this.options.id)
+      .then(function (data) {
+        _this.setData({
+          space: data
+        });
+      })
+    peiban.getDakaListBySpaceId(_this.options.id)
+      .then(function (data) {
+        _this.setData({
+          dakalist: data.dakas
+        });
+        console.log(data);
+      })
 
   },
 
@@ -63,19 +81,19 @@ Page({
   onShareAppMessage: function () {
 
   },
-  spacedaka: function () {
+  spacedaka: function (event) {
     wx.navigateTo({
-      url: '/pages/spacedaka/spacedaka',
+      url: '/pages/spacedaka/spacedaka?id=' + event.currentTarget.dataset.id,
     })
   },
-  spacemulu: function () {
+  spacemulu: function (event) {
     wx.navigateTo({
-      url: '/pages/spacemulu/spacemulu',
+      url: '/pages/spacemulu/spacemulu?id=' + event.currentTarget.dataset.id,
     })
   },
-  spaceinfo: function () {
+  spaceinfo: function (event) {
     wx.navigateTo({
-      url: '/pages/spaceinfo/spaceinfo',
+      url: '/pages/spaceinfo/spaceinfo?id=' + event.currentTarget.dataset.id,
     })
-  },
+  }
 })

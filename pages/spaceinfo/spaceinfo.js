@@ -84,9 +84,9 @@ Page({
   onShareAppMessage: function () {
 
   },
-  spacedaka: function () {
+  spacedaka: function (event) {
     wx.navigateTo({
-      url: '/pages/spacedaka/spacedaka',
+      url: '/pages/spacedaka/spacedaka?id=' + event.currentTarget.dataset.id,
     })
   },
   spacemulu: function (event) {
@@ -94,9 +94,9 @@ Page({
       url: '/pages/spacemulu/spacemulu?id=' + event.currentTarget.dataset.id,
     })
   },
-  spaceinfo: function () {
+  spaceinfo: function (event) {
     wx.navigateTo({
-      url: '/pages/spaceinfo/spaceinfo',
+      url: '/pages/spaceinfo/spaceinfo?id=' + event.currentTarget.dataset.id,
     })
   }
 })

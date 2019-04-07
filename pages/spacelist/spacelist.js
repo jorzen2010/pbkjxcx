@@ -1,10 +1,14 @@
 // pages/spacelist/spacelist.js
+const app = getApp();
+const peiban = require('../../utils/peiban.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    spacelist:[]
+   
 
   },
 
@@ -12,6 +16,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var _this = this;
+    peiban.getSpaceByUid(app.globalData.userInfo.Id,0)
+      .then(function (data) {
+        _this.setData({
+          spacelist: data.spaces
+        });
+        console.log(data.spaces);
+
+      })
+
 
   },
 

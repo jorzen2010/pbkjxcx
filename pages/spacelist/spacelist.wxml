@@ -1,7 +1,9 @@
 <!--pages/spacelist/spacelist.wxml-->
+
+<block wx:for='{{spacelist}}' wx:key='key'>
 <view class='spaceitem'>
 <view class='itemtop' bindtap='spaceinfo'>
-<text class='title'>《非暴力沟通》陪伴式成长读书会</text>
+<text class='title'>{{item.Kongjian}}</text>
 <text class='smalltitle'>已陪伴打卡78次，陪伴互动89条</text>
 </view>
 <view class='itembottom'>
@@ -11,6 +13,7 @@
 <text>退出</text>
 </view>
 </view>
+</block>
 
 <view class='spaceitem'>
 <view class='itemtop' bindtap='spaceinfo'>
