@@ -43,9 +43,37 @@ const GetSpaceListByCount = (count) => new Promise((resolve) => {
   });
 });
 
+
+
 const getBookById = (id) => new Promise((resolve) => {
   wx.request({
     url: app.globalData.apiUrl + 'xiaochengxu/getBookById?id=' + id,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    success: function (res) {
+
+      resolve(res.data);
+    }
+  });
+});
+
+const getSpaceById = (id) => new Promise((resolve) => {
+  wx.request({
+    url: app.globalData.apiUrl + 'xiaochengxu/GetSpaceById?id=' + id,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    success: function (res) {
+
+      resolve(res.data);
+    }
+  });
+});
+
+const getRenwuListByBookId = (id) => new Promise((resolve) => {
+  wx.request({
+    url: app.globalData.apiUrl + 'xiaochengxu/GetRenwuListByBookId?bid=' + id,
     headers: {
       'Content-Type': 'application/json'
     },
@@ -63,6 +91,8 @@ module.exports = {
   getbijisByCount: getbijisByCount,
   getSpaceByUid: getSpaceByUid,
   GetSpaceListByCount: GetSpaceListByCount,
-  getBookById: getBookById
+  getBookById: getBookById,
+  getSpaceById: getSpaceById,
+  getRenwuListByBookId: getRenwuListByBookId
 }
 

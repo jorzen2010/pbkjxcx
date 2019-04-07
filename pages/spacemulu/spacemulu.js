@@ -1,10 +1,13 @@
 // pages/spacemulu/spacemulu.js
+const app = getApp();
+const peiban = require('../../utils/peiban.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    mulu:[]
 
   },
 
@@ -12,6 +15,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var _this = this;
+    peiban.getRenwuListByBookId(_this.options.id)
+    .then(function(data){
+      _this.setData({
+        mulu:data.renwus
+      })
+      console.log(data);
+      
+    })
 
   },
 

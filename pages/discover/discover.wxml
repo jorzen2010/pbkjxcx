@@ -32,7 +32,7 @@
 
 
 <block wx:for='{{spaceslist}}' wx:key='key'>
-<view class='space-item' bindtap='spaceinfo'>
+<view class='space-item' bindtap='spaceinfo'  data-id="{{item.Id}}">
 <view class='spaceitem-img'>
 <image src="/src/images/shu.png" mode='scaleToFill'></image>
 </view>

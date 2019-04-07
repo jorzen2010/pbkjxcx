@@ -1,10 +1,15 @@
 // pages/spaceinfo/spaceinfo.js
+const app = getApp();
+const peiban = require('../../utils/peiban.js');
+var Wxparse = require("../../utils/wxParse/wxParse.js");
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    space:{},
+    book:{}
 
   },
 
@@ -12,7 +17,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var _this=this;
+    peiban.getSpaceById(_this.options.id)
+    .then(function (data) {
+      _this.setData({
+        space: data
+      });
+      console.log(data);
+      peiban.getBookById(data.ProductBook)
+      .then(function(data){
+        _this.setData({
+          book: data
+        });
+        console.log(data);
+        Wxparse.wxParse('article_content', 'html', data.Content, _this, 5)
+      })
 
+    })
   },
 
   /**
@@ -68,9 +89,9 @@ Page({
       url: '/pages/spacedaka/spacedaka',
     })
   },
-  spacemulu: function () {
+  spacemulu: function (event) {
     wx.navigateTo({
-      url: '/pages/spacemulu/spacemulu',
+      url: '/pages/spacemulu/spacemulu?id=' + event.currentTarget.dataset.id,
     })
   },
   spaceinfo: function () {

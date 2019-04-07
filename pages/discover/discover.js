@@ -109,9 +109,9 @@ Page({
       url: '/pages/spacelist/spacelist',
     })
   },
-  spaceinfo:function(){
+  spaceinfo: function (event){
     wx.navigateTo({
-      url: '/pages/spaceinfo/spaceinfo',
+      url: '/pages/spaceinfo/spaceinfo?id=' + event.currentTarget.dataset.id,
     })
   },
   dakacontent: function (event){

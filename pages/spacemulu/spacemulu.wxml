@@ -1,30 +1,27 @@
 <!--pages/spacemulu/spacemulu.wxml-->
-<import src="/pages/template/space-top.wxml"/>
-<template is="space-top"></template>
+
+<view class='spaceinfo'>
+<view>
+<text class='spacetitle'>{{data}}</text>
+</view>
+<view>
+<button type='primary' size='mini'>陪伴师:赵征</button>
+</view>
+</view>
+<view class='spacemenu'>
+<text bindtap='spaceinfo'  data-id="{{space.Id}}">介绍</text>
+<text bindtap='spacemulu'  data-id="{{space.Id}}">目录</text>
+<text bindtap='spacedaka'   data-id="{{space.Id}}">打卡</text>
+<text bindtap='onShareAppMessage'  data-id="{{space.Id}}">分享</text>
+</view>
 
 <view class='spacemulu'>
-<view class='muluitem'>
-<text>1、你是什么意思呢，我不知道啊</text>
-<image src="/src/images/right.png" mode='scaleToFill'></image>
-</view>
 
+<block wx:for='{{mulu}}' wx:key='key'>
 <view class='muluitem'>
-<text>1、你是什么意思呢，我不知道啊</text>
+<text>1、{{item.Title}}</text>
 <image src="/src/images/right.png" mode='scaleToFill'></image>
 </view>
+</block>
 
-<view class='muluitem'>
-<text>1、你是什么意思呢，我不知道啊</text>
-<image src="/src/images/right.png" mode='scaleToFill'></image>
-</view>
-
-<view class='muluitem'>
-<text>1、你是什么意思呢，我不知道啊</text>
-<image src="/src/images/right.png" mode='scaleToFill'></image>
-</view>
-
-<view class='muluitem'>
-<text>1、你是什么意思呢，我不知道啊</text>
-<image src="/src/images/right.png" mode='scaleToFill'></image>
-</view>
 </view>

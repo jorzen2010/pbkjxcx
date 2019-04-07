@@ -1,7 +1,7 @@
 <template name='space-top'>
 <view class='spaceinfo'>
 <view>
-<text class='spacetitle'>非暴力沟通陪伴式成长读书会</text>
+<text class='spacetitle'>{{data}}</text>
 </view>
 <view>
 <button type='primary' size='mini'>陪伴师:赵征</button>
