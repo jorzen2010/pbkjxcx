@@ -2,54 +2,15 @@
 
 <block wx:for='{{spacelist}}' wx:key='key'>
 <view class='spaceitem'>
-<view class='itemtop' bindtap='spaceinfo'>
-<text class='title'>{{item.Kongjian}}</text>
+<view class='itemtop' bindtap='spaceinfo' data-id='{{item.Id}}'>
+<text class='title'>{{item.Title}}</text>
 <text class='smalltitle'>已陪伴打卡78次，陪伴互动89条</text>
 </view>
 <view class='itembottom'>
-<text>打卡日历</text>
-<text>我的打卡</text>
-<text>互动陪伴</text>
+<text bindtap='spaceinfo' data-id='{{item.Id}}'>空间介绍</text>
+<text bindtap='spacemulu' data-id='{{item.Id}}'>打卡目录</text>
+<text bindtap='spacedaka' data-id='{{item.Id}}'>打卡日历</text>
 <text>退出</text>
 </view>
 </view>
 </block>
-
-<view class='spaceitem'>
-<view class='itemtop' bindtap='spaceinfo'>
-<text class='title'>《非暴力沟通》陪伴式成长读书会</text>
-<text class='smalltitle'>已陪伴打卡78次，陪伴互动89条</text>
-</view>
-<view class='itembottom'>
-<text>空间介绍</text>
-<text>邀请好友</text>
-<text>陪伴日历</text>
-<text>申请加入</text>
-</view>
-</view>
-
-<view class='spaceitem'>
-<view class='itemtop' bindtap='spaceinfo'>
-<text class='title'>《非暴力沟通》陪伴式成长读书会</text>
-<text class='smalltitle'>已陪伴打卡78次，陪伴互动89条</text>
-</view>
-<view class='itembottom'>
-<text>打卡日历</text>
-<text>我的打卡</text>
-<text>互动陪伴</text>
-<text>退出</text>
-</view>
-</view>
-
-<view class='spaceitem'>
-<view class='itemtop' bindtap='spaceinfo'>
-<text class='title'>《非暴力沟通》陪伴式成长读书会</text>
-<text class='smalltitle'>已陪伴打卡78次，陪伴互动89条</text>
-</view>
-<view class='itembottom'>
-<text>打卡日历</text>
-<text>我的打卡</text>
-<text>互动陪伴</text>
-<text>退出</text>
-</view>
-</view>

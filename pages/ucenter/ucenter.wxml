@@ -34,17 +34,6 @@
 
 <view class='menu'>
 
-
-<view class='menu-item'>
-<view class='menu-item-text'>
-<image src="/src/images/guanlirukou.png" mode='scaleToFill'></image>
-<text>管理入口</text>
-</view>
-<view class='menu-item-icon'>
-<image src="/src/images/right.png" mode='scaleToFill'></image>
-</view>
-</view>
-
 <view class='menu-item' bindtap='spacelist'>
 <view class='menu-item-text'>
 <image src="/src/images/kongjian.png" mode='scaleToFill'></image>

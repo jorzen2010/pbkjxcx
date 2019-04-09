@@ -17,13 +17,17 @@ Page({
    */
   onLoad: function (options) {
     var _this = this;
+
     peiban.getSpaceByUid(app.globalData.userInfo.Id,0)
       .then(function (data) {
-        _this.setData({
-          spacelist: data.spaces
-        });
-        console.log(data.spaces);
-
+        
+        Promise.all(data.spaces.map(item => peiban.getSpaceById(item.Id)))
+        .then(function(res){
+          _this.setData({
+            spacelist: res
+          });
+          console.log(res);
+        })
       })
 
 
@@ -77,9 +81,19 @@ Page({
   onShareAppMessage: function () {
 
   },
-  spaceinfo:function(){
+  spaceinfo:function(event){
     wx.navigateTo({
-      url: '/pages/spaceinfo/spaceinfo',
+      url: '/pages/spaceinfo/spaceinfo?id=' + event.currentTarget.dataset.id,
+    })
+  },
+  spacemulu: function (event) {
+    wx.navigateTo({
+      url: '/pages/spacemulu/spacemulu?id=' + event.currentTarget.dataset.id,
+    })
+  },
+  spacedaka: function (event) {
+    wx.navigateTo({
+      url: '/pages/spacedaka/spacedaka?id=' + event.currentTarget.dataset.id,
     })
   }
 })
