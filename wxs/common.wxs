@@ -15,8 +15,9 @@
 
 
 function delHtmlTag(str) {
-  var reg = getRegExp("/<[^>]+>/", "g");
-  return str.replace(reg,'');  //正则去掉所有的html标记
+  var reg = getRegExp("<[^>]+>", "g");
+  var result = str.replace(reg, '');
+  return result; 
 }
 
 module.exports = {
