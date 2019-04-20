@@ -97,6 +97,20 @@ const getDakaListBySpaceId = (id) => new Promise((resolve) => {
   });
 });
 
+const getBijisByPid = (id,pagenum) => new Promise((resolve) => {
+  wx.request({
+    url: app.globalData.apiUrl + 'xiaochengxu/GetBijiByPid?pid=' + id+'&page=pagenum',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    success: function (res) {
+
+      resolve(res.data);
+    }
+  });
+});
+
+
 
 
 //暴露接口给外部使用
@@ -107,6 +121,7 @@ module.exports = {
   getBookById: getBookById,
   getSpaceById: getSpaceById,
   getRenwuListByBookId: getRenwuListByBookId,
-  getDakaListBySpaceId: getDakaListBySpaceId
+  getDakaListBySpaceId: getDakaListBySpaceId,
+  getBijisByPid: getBijisByPid
 }
 

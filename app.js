@@ -6,7 +6,7 @@ App({
     wx.login({
       success: res => {
         var _this=this;
-        console.log('code是：'+res.code)
+       // console.log('code是：'+res.code)
 
         wx.request({
           url: _this.globalData.apiUrl + 'xiaochengxu/xcxLogin',
@@ -17,7 +17,7 @@ App({
             'Content-Type': 'application/json'
           },
           success: function (res) {
-            console.log('获取到的openid信息：'+res.data.openid);
+           // console.log('获取到的openid信息：'+res.data.openid);
             _this.globalData.loginInfo=res.data;
             if (_this.loginInfoReadyCallback) {
               _this.loginInfoReadyCallback(res)
@@ -41,7 +41,7 @@ App({
                   if (_this.userInfoReadyCallback) {
                     _this.userInfoReadyCallback(res)
                   }
-                  console.log(_this.globalData.userInfo);
+               //   console.log(_this.globalData.userInfo);
                 }
                 }
 

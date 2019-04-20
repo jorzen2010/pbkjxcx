@@ -1,10 +1,14 @@
 // pages/mydaka/mydaka.js
+const app = getApp();
+const peiban = require('../../utils/peiban.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    userInfo:{},
+    mybijis:[]
   
   },
 
@@ -12,6 +16,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    var _this = this;
+    _this.setData({
+      userInfo: app.globalData.userInfo
+    });
+    console.log(app.globalData.userInfo);
+    peiban.getBijisByPid(app.globalData.userInfo.Id,1)
+      .then(function (data) {
+        _this.setData({
+          mybijis: data.dakas
+        });
+        console.log(data);
+      });
+
   
   },
 
@@ -74,9 +92,9 @@ Page({
       url: '/pages/dakacontent/dakacontent',
     })
   },
-  daka:function(){
+  dakacontent: function (event) {
     wx.navigateTo({
-      url: '/pages/daka/daka',
+      url: '/pages/dakacontent/dakacontent?id=' + event.currentTarget.dataset.id,
     })
   }
 })

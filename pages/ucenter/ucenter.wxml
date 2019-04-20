@@ -22,10 +22,10 @@
 <text class='item'>打卡</text>
 </view>
 
-<view class='userinfo-menu-item'>
+<!-- <view class='userinfo-menu-item'>
 <text class='shuzi'>345次</text>
 <text class='item'>互动</text>
-</view>
+</view> -->
 
 </view>
 

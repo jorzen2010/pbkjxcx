@@ -5,9 +5,6 @@
 <text class='title'>{{daka.DakaTitle}}</text>
 <text class='smalltitle'>发布日期:{{daka.DakaTime}}</text>
 <view class='content'>
-<view wx:if="{{daka.DakaContent!=''}}">
-{{tools.sub(tools.delHtmlTag(daka.DakaContent),5)}}
-</view>
 <template is="wxParse" data="{{wxParseData:article_content.nodes}}"/>
 </view> 
 
