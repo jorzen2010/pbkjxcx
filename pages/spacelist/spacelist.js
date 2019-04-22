@@ -82,17 +82,18 @@ Page({
 
   },
   spaceinfo:function(event){
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/spaceinfo/spaceinfo?id=' + event.currentTarget.dataset.id,
     })
+   
   },
   spacemulu: function (event) {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/spacemulu/spacemulu?id=' + event.currentTarget.dataset.id,
     })
   },
   spacedaka: function (event) {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/spacedaka/spacedaka?id=' + event.currentTarget.dataset.id,
     })
   }

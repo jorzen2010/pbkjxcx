@@ -32,6 +32,12 @@
         "text": "发现"
       },
       {
+        "pagePath": "pages/spacelist/spacelist",
+        "iconPath": "src/images/daka.png",
+        "selectedIconPath": "src/images/daka_select.png",
+        "text": "空间"
+      },
+      {
         "pagePath": "pages/mydaka/mydaka",
         "iconPath": "src/images/daka.png",
         "selectedIconPath": "src/images/daka_select.png",

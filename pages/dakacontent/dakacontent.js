@@ -1,5 +1,6 @@
 // pages/dakacontent/dakacontent.js
 const app = getApp();
+const peiban = require('../../utils/peiban.js');
 var Wxparse = require("../../utils/wxParse/wxParse.js");
 var util = require("../../utils/common.js");
 Page({
@@ -11,8 +12,10 @@ Page({
     dakaid:0,
     daka:{},
     article_content:'',
-    dianzans:[],
-    pingluns:[]
+    // dianzans:[],
+    dianzanrens:[],
+    pingluns:[],
+    pinglunrens:[]
 
   },
 
@@ -47,10 +50,18 @@ Page({
         'Content-Type': 'application/json'
       },
       success: function (res) {
-        _this.setData({
-          dianzans: res.data.dianzans,
+        // _this.setData({
+        //   dianzans: res.data.dianzans,
 
-        });
+        // });
+
+        Promise.all(res.data.dianzans.map(item => peiban.getUserInfoById(item.DianzanRen)))
+          .then(function (data) {
+            _this.setData({
+              dianzanrens: data
+            });
+            console.log(data);
+          })
       }
     });
     wx.request({
@@ -62,6 +73,14 @@ Page({
         _this.setData({
           pingluns: res.data.pingluns,
         });
+        Promise.all(res.data.pingluns.map(item => peiban.getUserInfoById(item.PinglunRen)))
+          .then(function (data) {
+            _this.setData({
+              pinglunrens: data
+            });
+            console.log(data);
+          })
+
       }
     });
 

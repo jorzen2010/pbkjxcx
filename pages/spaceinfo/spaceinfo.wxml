@@ -25,7 +25,7 @@
 
 </view>
 <view class='infomenu'>
-<view class='menufirst'>
+<view class='menufirst' bindtap='spacelist'>
 <image src="/src/images/shouye.png" mode='scaleToFill'></image>
 <text>首页</text>
 </view>

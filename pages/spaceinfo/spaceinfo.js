@@ -84,6 +84,12 @@ Page({
   onShareAppMessage: function () {
 
   },
+
+  spacelist: function (event) {
+    wx.switchTab({
+      url: '/pages/spacelist/spacelist',
+    })
+  },
   spacedaka: function (event) {
     wx.navigateTo({
       url: '/pages/spacedaka/spacedaka?id=' + event.currentTarget.dataset.id,

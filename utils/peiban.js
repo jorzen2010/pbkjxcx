@@ -110,6 +110,19 @@ const getBijisByPid = (id,pagenum) => new Promise((resolve) => {
   });
 });
 
+const getUserInfoById = (id) => new Promise((resolve) => {
+  wx.request({
+    url: app.globalData.apiUrl + 'xiaochengxu/GetUserInfoById?id='+id,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    success: function (res) {
+
+      resolve(res.data);
+    }
+  });
+});
+
 
 
 
@@ -122,6 +135,7 @@ module.exports = {
   getSpaceById: getSpaceById,
   getRenwuListByBookId: getRenwuListByBookId,
   getDakaListBySpaceId: getDakaListBySpaceId,
-  getBijisByPid: getBijisByPid
+  getBijisByPid: getBijisByPid,
+  getUserInfoById: getUserInfoById
 }
 
