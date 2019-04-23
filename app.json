@@ -11,7 +11,8 @@
     "pages/spacedaka/spacedaka",
     "pages/spacemulu/spacemulu",
     "pages/spaceinfo/spaceinfo",
-    "pages/weizhuce/weizhuce"
+    "pages/weizhuce/weizhuce",
+    "pages/pinglun/pinglun"
   ],
   "window": {
     "backgroundTextStyle": "light",

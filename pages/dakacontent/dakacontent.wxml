@@ -28,8 +28,8 @@
 
 <view  class='pingluncontent'>
 <view class='pingluntitle'>
-<text>精选评论</text>
-<text>写评论</text>
+<text style='color:#777777'>精选评论</text>
+<text style='color:#5d6a8d'>写评论</text>
 </view>
 <block wx:for='{{pingluns}}' wx:key='key'>
 <view>
@@ -39,6 +39,6 @@
 </view>
 <view><text>{{item.PinglunContent}}</text></view>
 </view>
-
 </block>
+
 </view>

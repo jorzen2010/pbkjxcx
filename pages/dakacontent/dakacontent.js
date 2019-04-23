@@ -16,7 +16,6 @@ Page({
     dianzanrens:[],
     pingluns:[],
     pinglunrens:[]
-
   },
 
   /**

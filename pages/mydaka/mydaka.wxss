@@ -9,7 +9,6 @@ page{
   padding: 5px;
   display: flex;
   flex-direction: row;
-  margin-bottom: 10px;
 }
 
 .userinfo image{
@@ -35,7 +34,8 @@ page{
   text-align: center;
   color: #cdcdcd;
   font-size: 12pt;
-  line-height: 30px;
+  line-height: 40px;
+  border-top: 1px solid #cdcdcd;
   padding-bottom: 10px;
 }
 

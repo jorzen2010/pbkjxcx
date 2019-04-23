@@ -8,7 +8,7 @@
 </view>
 </view>
 
-<view class='myspace-more' bindtap='goto'>查看参与的全部空间</view>
+<view class='myspace-more' bindtap='spacelist'>查看参与的全部空间</view>
 
 <view class='daka-list'>
 <block wx:for='{{mybijis}}' wx:key='key'>
@@ -24,13 +24,6 @@
 
 <view class='daka-content'>
 {{tools.sub(tools.delHtmlTag(item.DakaContent),5)}}
-
-</view>
-
-<view class='daka-hudong'>
-<text>喜欢</text>
-<text>评论</text>
-<text>分享</text>
 </view>
 
 </view>

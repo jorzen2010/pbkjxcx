@@ -81,11 +81,10 @@ Page({
   onShareAppMessage: function () {
   
   },
-  goto:function(){
-    wx.navigateTo({
+  spacelist:function(){
+    wx.switchTab({
       url: '/pages/spacelist/spacelist',
-    })
-   
+    })   
   },
   dakacontent:function(){
     wx.navigateTo({
