@@ -82,7 +82,7 @@ Page({
 
   },
   spaceinfo:function(event){
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/spaceinfo/spaceinfo?id=' + event.currentTarget.dataset.id,
     })
    

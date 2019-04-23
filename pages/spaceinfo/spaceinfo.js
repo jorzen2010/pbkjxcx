@@ -8,8 +8,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    canEnter:false,
     space:{},
-    book:{}
+    book: {},
+    mulu: []
 
   },
 
@@ -33,7 +35,14 @@ Page({
         Wxparse.wxParse('article_content', 'html', data.Content, _this, 5)
       })
 
-    })
+    });
+    peiban.getRenwuListByBookId(_this.options.id)
+      .then(function (data) {
+        _this.setData({
+          mulu: data.renwus
+        })
+        console.log(data);
+      })
   },
 
   /**
@@ -103,6 +112,11 @@ Page({
   spaceinfo: function (event) {
     wx.navigateTo({
       url: '/pages/spaceinfo/spaceinfo?id=' + event.currentTarget.dataset.id,
+    })
+  },
+  daka:function(event){
+    wx.navigateTo({
+      url: '/pages/daka/daka',
     })
   }
 })

@@ -1,11 +1,10 @@
-<import src="/pages/template/space-top.wxml"/>
-<template is="space-top"></template>
+
 
 <view class='dakayaoqiu'>
 <view class='dakayaoqiumunu'>
-<text>前一天</text>
-<text>第9天</text>
-<text>后一天</text>
+<text>前一任务</text>
+<text>第9任务</text>
+<text>后一任务</text>
 </view>
 <text>{{xianshiyaoiqucontent}}</text>
 <text bindtap='zhedie' style='display:{{zhedianbtn}}' class='zhedie'>折叠</text>
@@ -19,6 +18,12 @@
 <textarea  />
 </view>
 <view class='dakasection-button'>
-<button type='primary'>提交打卡</button>
+<button type='primary'>我要打卡</button>
 </view>
+</view>
+
+
+<view>
+<text>本任务完成：9人</text>
+<view>你是阿斯蒂芬的</view>
 </view>

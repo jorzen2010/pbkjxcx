@@ -8,28 +8,39 @@
 <button type='primary' size='mini'>陪伴师:赵征</button>
 </view>
 </view>
-<view class='spacemenu'>
+<!-- <view class='spacemenu'>
 <text bindtap='spaceinfo'  data-id="{{space.Id}}">介绍</text>
 <text bindtap='spacemulu'  data-id="{{space.Id}}">目录</text>
 <text bindtap='spacedaka'   data-id="{{space.Id}}">打卡</text>
-<text bindtap='onShareAppMessage'  data-id="{{space.Id}}">分享</text>
-</view>
+</view> -->
 
 <view class='infocontent'>
 <text class='spaceInfotitle'>空间介绍</text>
-<text>{{space.Info}} </text>
+<view class='content'>{{space.Info}} </view> 
 <text class='spaceInfotitle'>项目介绍</text>
 <view class='content'>
 <template is="wxParse" data="{{wxParseData:article_content.nodes}}"/>
 </view> 
 
 </view>
+<view class='spacemulu'>
+<text class='spaceInfotitle'>空间任务</text>
+<view class='content'>
+<block wx:for='{{mulu}}' wx:key='key'>
+<view class='muluitem'>
+<text>{{index+1}}、{{item.Title}}</text>
+<image src="/src/images/right.png" mode='scaleToFill'></image>
+</view>
+</block>
+</view>
+</view>
+
 <view class='infomenu'>
-<view class='menufirst' bindtap='spacelist'>
+<!-- <view class='menufirst' bindtap='spacelist'>
 <image src="/src/images/shouye.png" mode='scaleToFill'></image>
 <text>首页</text>
-</view>
-<view class='menu-btn'>
-<text>我要加入</text>
+</view> -->
+<view class='menu-btn' bindtap='daka'>
+<text>进入空间（不是会员无权进入）</text>
 </view>
 </view>

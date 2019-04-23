@@ -28,16 +28,19 @@
 
 .infocontent{
   background-color: #ffffff;
-  padding: 10px 10px 80px 10px;
+  padding: 10px 10px 0px 10px;
   line-height: 30px;
-  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
 }
 .spaceInfotitle{
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: #000000;
+}
+.content{
+  padding-bottom: 10px;
+  color: #cdcdcd;
 }
 .infomenu{
   position:fixed;
@@ -70,4 +73,22 @@
   padding: 0px 10px;
   width: 100%;
   text-align: center;
+}
+.spacemulu{
+  padding: 10px;
+  background-color: #ffffff;
+  margin-bottom: 50px;
+}
+.muluitem{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 40px;
+  align-items: center;
+
+  color: #cdcdcd;
+}
+.muluitem image{
+  height: 25px;
+  width: 25px;
 }
