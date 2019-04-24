@@ -29,7 +29,7 @@
 <block wx:for='{{mulu}}' wx:key='key'>
 <view class='muluitem'>
 <text>{{index+1}}、{{item.Title}}</text>
-<image src="/src/images/right.png" mode='scaleToFill'></image>
+<text>解锁</text>
 </view>
 </block>
 </view>

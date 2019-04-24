@@ -120,7 +120,7 @@
 </view> -->
 
 
-<view class='biji-container'>
+<!-- <view class='biji-container'>
 <h3>大家都在打卡进步</h3><text class='title-more'>更多</text>
 <view class='biji-list'>
 
@@ -129,5 +129,5 @@
 </block>
 
 </view>
-</view>
+</view> -->
 

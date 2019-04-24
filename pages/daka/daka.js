@@ -11,6 +11,7 @@ Page({
     xianshiyaoiqucontent:'',
     zhedianbtn:'block',
     zhankaibtn:'none',
+    renwu:{}
 
   },
 
@@ -23,6 +24,8 @@ Page({
       xianshiyaoiqucontent: _this.data.dakayaoqiucontent,
       zhedieyaoqiucontent: _this.data.dakayaoqiucontent.substring(0, 50)
       });
+
+    
   },
 
   /**
@@ -89,19 +92,5 @@ Page({
       zhankaibtn: 'none'
     });
   },
-  spacedaka: function () {
-    wx.navigateTo({
-      url: '/pages/spacedaka/spacedaka',
-    })
-  },
-  spacemulu: function () {
-    wx.navigateTo({
-      url: '/pages/spacemulu/spacemulu',
-    })
-  },
-  spaceinfo: function () {
-    wx.navigateTo({
-      url: '/pages/spaceinfo/spaceinfo',
-    })
-  },
+
 })
