@@ -8,17 +8,12 @@
 <button type='primary' size='mini'>陪伴师:赵征</button>
 </view>
 </view>
-<view class='spacemenu'>
-<text bindtap='spaceinfo'  data-id="{{space.Id}}">介绍</text>
-<text bindtap='spacemulu'  data-id="{{space.Id}}">目录</text>
-<text bindtap='spacedaka'   data-id="{{space.Id}}">打卡</text>
-<text bindtap='onShareAppMessage'  data-id="{{space.Id}}">分享</text>
-</view>
+
 
 <view class='spacemulu'>
 
 <block wx:for='{{mulu}}' wx:key='key'>
-<view class='muluitem'>
+<view class='muluitem'  bindtap='daka' data-id='{{item.Id}}'>
 <text>{{index+1}}、{{item.Title}}</text>
 <image src="/src/images/right.png" mode='scaleToFill'></image>
 </view>

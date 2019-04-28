@@ -123,7 +123,18 @@ const getUserInfoById = (id) => new Promise((resolve) => {
   });
 });
 
+const getRenwuById = (id) => new Promise((resolve) => {
+  wx.request({
+    url: app.globalData.apiUrl + 'xiaochengxu/GetRenwuById?id=' + id,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    success: function (res) {
 
+      resolve(res.data);
+    }
+  });
+});
 
 
 //暴露接口给外部使用
@@ -136,6 +147,7 @@ module.exports = {
   getRenwuListByBookId: getRenwuListByBookId,
   getDakaListBySpaceId: getDakaListBySpaceId,
   getBijisByPid: getBijisByPid,
-  getUserInfoById: getUserInfoById
+  getUserInfoById: getUserInfoById,
+  getRenwuById: getRenwuById
 }
 

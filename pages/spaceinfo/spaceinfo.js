@@ -11,7 +11,8 @@ Page({
     canEnter:false,
     space:{},
     book: {},
-    mulu: []
+    mulu: [],
+    ifVip:false
 
   },
 
@@ -20,6 +21,9 @@ Page({
    */
   onLoad: function (options) {
     var _this=this;
+    _this.setData({
+      ifVip: app.globalData.ifVip
+    });
     peiban.getSpaceById(_this.options.id)
     .then(function (data) {
       _this.setData({
@@ -43,6 +47,8 @@ Page({
         })
         console.log(data);
       })
+
+    
   },
 
   /**
@@ -93,6 +99,36 @@ Page({
   onShareAppMessage: function () {
 
   },
+  zixun:function(){
+    wx.showActionSheet({
+      itemList: ['请添加微信：peibanshichengzhang'],
+      success(res) {
+        console.log(res.tapIndex)
+        if(res.tapIndex==1)
+        {
+          console.log('你选择了1');
+        }
+      },
+      fail(res) {
+        console.log(res.errMsg)
+      }
+    })
+  },
+  fenxiang: function () {
+    wx.showActionSheet({
+      itemList: ['转发给好友','转发到群'],
+      success(res) {
+        console.log(res.tapIndex)
+        if (res.tapIndex == 1) {
+          console.log('你选择了1');
+        }
+      },
+      fail(res) {
+        console.log(res.errMsg)
+      }
+    })
+  },
+
 
   spacelist: function (event) {
     wx.switchTab({
@@ -114,9 +150,5 @@ Page({
       url: '/pages/spaceinfo/spaceinfo?id=' + event.currentTarget.dataset.id,
     })
   },
-  daka:function(event){
-    wx.navigateTo({
-      url: '/pages/daka/daka',
-    })
-  }
+ 
 })

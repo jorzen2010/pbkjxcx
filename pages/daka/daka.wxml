@@ -1,22 +1,21 @@
-
+<import src="../../utils/wxParse/wxParse.wxml"/>
+<wxs src="../../wxs/common.wxs" module="tools" />
 
 <view class='dakayaoqiu'>
-<view class='dakayaoqiumunu'>
-<text>前一任务</text>
-<text>第9任务</text>
-<text>后一任务</text>
-</view>
-<text>{{xianshiyaoiqucontent}}</text>
-<text bindtap='zhedie' style='display:{{zhedianbtn}}' class='zhedie'>折叠</text>
-<text bindtap='zhankai' style='display:{{zhankaibtn}}' class='zhankai'>展开</text>
+
+<view class='content'>
+<template is="wxParse" data="{{wxParseData:article_content.nodes}}"/>
+</view> 
+<!-- <text bindtap='zhedie' style='display:{{zhedianbtn}}' class='zhedie'>折叠</text>
+<text bindtap='zhankai' style='display:{{zhankaibtn}}' class='zhankai'>展开</text> -->
 </view>
 <view class='dakasection'>
-<view class='dakasection-top'>
+<!-- <view class='dakasection-top'>
 <text>"0/500</text>
 </view>
 <view class='dakasection-textarea'>
 <textarea  />
-</view>
+</view> -->
 <view class='dakasection-button'>
 <button type='primary'>我要打卡</button>
 </view>

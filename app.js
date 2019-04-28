@@ -83,6 +83,7 @@ App({
     openid:'',
     unionid:'',
     session_key:'',
+    ifVip:true,
     //apiUrl:'http://localhost:1220/',
     apiUrl: 'https://peiban.zzd123.com/'
   }

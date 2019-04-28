@@ -1,4 +1,4 @@
- function sub(val, count) { 
+function sub(val, count) { 
   if (val.length == 0 || val == undefined) 
   {
      return; 

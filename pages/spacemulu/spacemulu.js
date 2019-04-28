@@ -100,5 +100,10 @@ Page({
     wx.navigateTo({
       url: '/pages/spaceinfo/spaceinfo?id=' + event.currentTarget.dataset.id,
     })
+  },
+  daka: function (event) {
+    wx.navigateTo({
+      url: '/pages/daka/daka?id=' + event.currentTarget.dataset.id,
+    })
   }
 })

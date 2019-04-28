@@ -36,11 +36,26 @@
 </view>
 
 <view class='infomenu'>
-<!-- <view class='menufirst' bindtap='spacelist'>
+<view class='menufirst' bindtap='spacelist'>
 <image src="/src/images/shouye.png" mode='scaleToFill'></image>
 <text>首页</text>
-</view> -->
-<view class='menu-btn' bindtap='daka'>
-<text>进入空间（不是会员无权进入）</text>
 </view>
+<view class='menufirst' bindtap='fenxiang'>
+<image src="/src/images/shouye.png" mode='scaleToFill'></image>
+<text>分享</text>
+</view>
+<view class='menufirst' bindtap='zixun'>
+<image src="/src/images/shouye.png" mode='scaleToFill'></image>
+<text>咨询</text>
+</view>
+<block wx:if="{{ifVip==true}}">
+<view class='menu-btn' bindtap='spacemulu'  data-id='{{space.Id}}'>
+<text>进入空间</text>
+</view>
+</block>
+<block wx:if="{{ifVip==false}}">
+<view class='menu-btnfalse'>
+<text>未申请会员不能加入</text>
+</view>
+</block>
 </view>
