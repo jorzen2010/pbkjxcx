@@ -1,0 +1,9 @@
+<!--pages/makedaka/makedaka.wxml-->
+<view class='dakaform'>
+<input class='title' placeholder='给自己的打卡起一个标题'></input>
+<textarea class='content'  auto-focus='true' placeholder='输入你的打卡内容'>
+</textarea>
+
+</view>
+
+<button class='dakabtn' type='primary'>打卡</button>

@@ -23,7 +23,7 @@ Page({
     app.userInfoReadyCallback=function(){
 
      // console.log(app.globalData.userInfo);
-      peiban.GetSpaceListByCount(3)
+      peiban.getSpaceListByCount(3)
       .then(function (data){
         _this.setData({
           spaceslist:data.spaces

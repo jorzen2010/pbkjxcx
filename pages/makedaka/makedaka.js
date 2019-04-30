@@ -1,4 +1,4 @@
-// pages/spacecontent/spacecontent.js
+// pages/makedaka/makedaka.js
 Page({
 
   /**

@@ -29,13 +29,13 @@ Page({
       _this.setData({
         space: data
       });
-      console.log(data);
+    //  console.log(data);
       peiban.getBookById(data.ProductBook)
       .then(function(data){
         _this.setData({
           book: data
         });
-        console.log(data);
+      //  console.log(data);
         Wxparse.wxParse('article_content', 'html', data.Content, _this, 5)
       })
 
@@ -45,7 +45,7 @@ Page({
         _this.setData({
           mulu: data.renwus
         })
-        console.log(data);
+      //  console.log(data);
       })
 
     

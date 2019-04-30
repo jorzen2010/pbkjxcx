@@ -1,7 +1,10 @@
 <import src="../../utils/wxParse/wxParse.wxml"/>
 <wxs src="../../wxs/common.wxs" module="tools" />
-
+<view class='dakabiaoti'>
+今日打卡任务
+</view>
 <view class='dakayaoqiu'>
+
 
 <view class='content'>
 <template is="wxParse" data="{{wxParseData:article_content.nodes}}"/>
@@ -16,13 +19,32 @@
 <view class='dakasection-textarea'>
 <textarea  />
 </view> -->
-<view class='dakasection-button'>
+<view class='dakasection-button' bindtap='makedaka' data-id='{{renwu.Id}}'>
 <button type='primary'>我要打卡</button>
 </view>
 </view>
 
 
-<view>
-<text>本任务完成：9人</text>
-<view>你是阿斯蒂芬的</view>
+<view class='daka-list'>
+<block wx:for='{{renwubijis}}' wx:key='key'>
+<view class='daka-item'  bindtap='dakacontent' data-id='{{item.Id}}'>
+
+<view class='daka-item-user'>
+<image src="/src/images/shu.png" mode='scaleToFill'></image>
+<view class='daka-item-usertext'>
+<text>赵征</text>
+<text>2019-04-04 08：45</text>
+<text>{{item.DakaTitle}}</text>
 </view>
+</view>
+
+<view class='daka-content'>
+
+{{tools.sub(tools.delHtmlTag(item.DakaContent),50)}}
+</view>
+
+</view>
+</block>
+</view>
+
+

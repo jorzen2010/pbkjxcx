@@ -1,5 +1,6 @@
 // pages/daka/daka.js
 const app = getApp();
+const peiban = require('../../utils/peiban.js');
 var Wxparse = require("../../utils/wxParse/wxParse.js");
 Page({
 
@@ -7,14 +8,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-
-    // dakayaoqiucontent: '这里的内容应该是有视频这里的内容应该是有音频这里的内容应该是有视频这里的内容应该是有音频这里的内容应该是有视频这里的内容应该是有音频这里的内容应该是有视频这里的内容应该是有音频这里的内容应该是有视频这里的内容应该是有音频这里的内容应该是有视频这里的内容应该是有音频这里的内容应该是有视频这里的内容应该是有音频这里的内容应该是有视频这里的内容应该是有音频这里的内容应该是有视频这里的内容应该是有音频',
-    // zhedieyaoqiucontent:'',
-    // xianshiyaoiqucontent:'',
-    // zhedianbtn:'block',
-    // zhankaibtn:'none',
     renwu:{},
-    renwuid:0
+    renwuid:0,
+    kongjianid:0,
+    peibanshiid:0,   
+    renwubijis:[]
 
   },
 
@@ -26,12 +24,15 @@ Page({
     _this.setData({
       renwuid: options.id,
     })
+    console.log('id是:'+options.id);
+    console.log('陪伴式id是:' + options.peibanshi);
+    console.log('空间id是:' + options.kid);
     // _this.setData({ 
     //   xianshiyaoiqucontent: _this.data.dakayaoqiucontent,
     //   zhedieyaoqiucontent: _this.data.dakayaoqiucontent.substring(0, 50)
     //   });
 
-    console.log(_this.data.renwuid);
+  //  console.log(_this.data.renwuid);
 
     wx.request({
       url: app.globalData.apiUrl + 'xiaochengxu/GetRenwuById?id=' +_this.data.renwuid,
@@ -44,8 +45,16 @@ Page({
           renwu: res.data,
 
         });
+        console.log(res.data)
 
-        Wxparse.wxParse('article_content', 'html', res.data.Content, _this, 5)
+        Wxparse.wxParse('article_content', 'html', res.data.Content, _this, 5);
+        peiban.getBijiByRenwuId(res.data.Id)
+          .then(function (data) {
+            _this.setData({
+              renwubijis: data.dakas
+            });
+            console.log(data.dakas);
+          });
       }
     });
 
@@ -116,5 +125,15 @@ Page({
       zhankaibtn: 'none'
     });
   },
+  dakacontent: function (event) {
+    wx.navigateTo({
+      url: '/pages/dakacontent/dakacontent?id=' + event.currentTarget.dataset.id,
+    })
+  },
+  makedaka: function (event) {
+    wx.redirectTo({
+      url: '/pages/makedaka/makedaka?id=' + event.currentTarget.dataset.id,
+    })
+  }
 
 })

@@ -5,19 +5,17 @@
     "pages/ucenter/ucenter",
     "pages/index/index",
     "pages/spacelist/spacelist",
-    "pages/spacecontent/spacecontent",
     "pages/dakacontent/dakacontent",
      "pages/daka/daka",
-    "pages/spacedaka/spacedaka",
     "pages/spacemulu/spacemulu",
     "pages/spaceinfo/spaceinfo",
     "pages/weizhuce/weizhuce",
-    "pages/pinglun/pinglun"
+    "pages/makedaka/makedaka"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "陪伴空间",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

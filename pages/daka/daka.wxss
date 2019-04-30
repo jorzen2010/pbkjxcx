@@ -1,23 +1,24 @@
 /* pages/daka/daka.wxss */
-@import "/pages/template/space-top.wxss";
 page{
   background-color: #efefef;
 }
 
+.dakabiaoti{
+  border-left: 5px coral solid;
+  margin: 10px 10px 0px 10px;
+  background-color: #ffffff;
+  padding: 10px 0px 10px 10px;
+  font-weight: 500;
+}
 .dakayaoqiu{
-  margin: 10px;
+  margin: 0px 10px 10px 10px;
   background-color: #ffffff;
   padding: 10px;
   display: flex;
   flex-direction: column;
   line-height: 30px;
 }
-.zhedie{
-  text-align: center;
-}
-.zhankai{
-  text-align: center;
-}
+
 .dakayaoqiumunu{
   display: flex;
   flex-direction: row;
@@ -46,6 +47,36 @@ page{
   margin: 10px;
 }
 .dakasection-button button{
-  background-color: #0000ff;
   border-radius: 50px;
+}
+
+
+.daka-list{
+  padding: 10px;
+}
+
+.daka-item{
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 10px 5px 5px 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #efefef;
+  border-radius: 0px 5px;
+}
+.daka-item-user{
+  display: flex;
+  flex-direction: row;
+}
+.daka-item-user image{
+   width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  line-height: 28px;
+}
+.daka-item-usertext{
+  display: flex;
+  flex-direction: column;
+  font-size: 12pt;
+  padding-left: 10px;
 }

@@ -1,0 +1,17 @@
+/* pages/makedaka/makedaka.wxss */
+.dakaform{
+  background-color: #ffffff;
+  padding: 10px;
+}
+.title{
+  border-bottom: 1px solid #efefef;
+  padding: 15px 0px;
+}
+.content{
+  width: 100%;
+  height: 360px;
+  padding: 15px 0px;
+}
+.dakabtn{
+  margin: 20px 10px;
+}

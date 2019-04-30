@@ -30,7 +30,7 @@ const getSpaceByUid = (uid,count) => new Promise((resolve) => {
 });
 
 //根据登陆信息获取空间列表
-const GetSpaceListByCount = (count) => new Promise((resolve) => {
+const getSpaceListByCount = (count) => new Promise((resolve) => {
   wx.request({
     url: app.globalData.apiUrl + 'xiaochengxu/GetSpaceListByCount?count=' + count,
     headers: {
@@ -110,6 +110,19 @@ const getBijisByPid = (id,pagenum) => new Promise((resolve) => {
   });
 });
 
+const getBijiByRenwuId = (id, pagenum) => new Promise((resolve) => {
+  wx.request({
+    url: app.globalData.apiUrl + 'xiaochengxu/GetBijiByRenwuId?rid=' + id + '&page=pagenum',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    success: function (res) {
+
+      resolve(res.data);
+    }
+  });
+});
+
 const getUserInfoById = (id) => new Promise((resolve) => {
   wx.request({
     url: app.globalData.apiUrl + 'xiaochengxu/GetUserInfoById?id='+id,
@@ -141,13 +154,14 @@ const getRenwuById = (id) => new Promise((resolve) => {
 module.exports = {
   getbijisByCount: getbijisByCount,
   getSpaceByUid: getSpaceByUid,
-  GetSpaceListByCount: GetSpaceListByCount,
+  getSpaceListByCount: getSpaceListByCount,
   getBookById: getBookById,
   getSpaceById: getSpaceById,
   getRenwuListByBookId: getRenwuListByBookId,
   getDakaListBySpaceId: getDakaListBySpaceId,
   getBijisByPid: getBijisByPid,
   getUserInfoById: getUserInfoById,
-  getRenwuById: getRenwuById
+  getRenwuById: getRenwuById,
+  getBijiByRenwuId: getBijiByRenwuId
 }
 
