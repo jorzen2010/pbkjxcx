@@ -10,6 +10,7 @@ Page({
   data: {
     renwu:{},
     renwuid:0,
+    space:{},
     kongjianid:0,
     peibanshiid:0,   
     renwubijis:[]
@@ -23,6 +24,7 @@ Page({
     var _this=this;
     _this.setData({
       renwuid: options.id,
+      kongjianid:options.kid,
     })
     console.log('id是:'+options.id);
     console.log('陪伴式id是:' + options.peibanshi);
@@ -33,6 +35,8 @@ Page({
     //   });
 
   //  console.log(_this.data.renwuid);
+
+    
 
     wx.request({
       url: app.globalData.apiUrl + 'xiaochengxu/GetRenwuById?id=' +_this.data.renwuid,
@@ -54,9 +58,18 @@ Page({
               renwubijis: data.dakas
             });
             console.log(data.dakas);
+            
           });
       }
     });
+
+    peiban.getSpaceById(_this.data.kongjianid)
+    .then(function (data){
+      _this.setData({
+        space:data
+      })
+      console.log(data);
+    })
 
     
   },
@@ -109,30 +122,16 @@ Page({
   onShareAppMessage: function () {
 
   },
-  zhedie:function(){
-    var _this=this;
-    _this.setData({ 
-      xianshiyaoiqucontent: _this.data.zhedieyaoqiucontent,
-      zhedianbtn: 'none',
-      zhankaibtn: 'block'
-    });
-  },
-  zhankai: function () {
-    var _this = this;
-    _this.setData({ 
-      xianshiyaoiqucontent: _this.data.dakayaoqiucontent,
-      zhedianbtn: 'block',
-      zhankaibtn: 'none'
-    });
-  },
+
   dakacontent: function (event) {
     wx.navigateTo({
       url: '/pages/dakacontent/dakacontent?id=' + event.currentTarget.dataset.id,
     })
   },
   makedaka: function (event) {
+    var _this=this;
     wx.redirectTo({
-      url: '/pages/makedaka/makedaka?id=' + event.currentTarget.dataset.id,
+      url: '/pages/makedaka/makedaka?id=' + event.currentTarget.dataset.id + '&kid=' + _this.data.space.Id + '&peibanshi=' + _this.data.space.Peibanshi + '&bid='+_this.data.space.ProductBook,
     })
   }
 

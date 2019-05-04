@@ -104,7 +104,7 @@ Page({
   daka: function (event) {
     var _this = this;
     wx.navigateTo({
-      url: '/pages/daka/daka?id=' + event.currentTarget.dataset.id + '&peibanshi=' + _this.data.space.Peibanshi+'&kid='+_this.data.space.Id+'&proid='+_this.data.space.ProductBook,
+      url: '/pages/daka/daka?id=' + event.currentTarget.dataset.id + '&kid='+_this.data.space.Id,
     })
   }
 })

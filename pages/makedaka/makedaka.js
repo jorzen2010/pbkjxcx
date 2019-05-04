@@ -5,6 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    kongjianid:0,
+    peibanshi:0,
+    renwuid:0,
+    bookid:0,
+    userid:0
 
   },
 
@@ -12,7 +17,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var _this=this;
+    _this.setData({
+      kongjianid: options.kid,
+      peibanshi: options.peibanshi,
+      renwuid: options.id,
+      bookid: options.bid
+    })
+    console.log('空间ID是：'+options.kid+'陪伴师' + options.peibanshi+'任务ID' +options.id+'bookid'+options.bid);
   },
 
   /**
