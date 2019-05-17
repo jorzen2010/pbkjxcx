@@ -29,12 +29,7 @@ Page({
     console.log('id是:'+options.id);
     console.log('陪伴式id是:' + options.peibanshi);
     console.log('空间id是:' + options.kid);
-    // _this.setData({ 
-    //   xianshiyaoiqucontent: _this.data.dakayaoqiucontent,
-    //   zhedieyaoqiucontent: _this.data.dakayaoqiucontent.substring(0, 50)
-    //   });
 
-  //  console.log(_this.data.renwuid);
 
     
 

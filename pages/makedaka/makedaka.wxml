@@ -1,9 +1,12 @@
 <!--pages/makedaka/makedaka.wxml-->
+<form bindsubmit='daka'>
 <view class='dakaform'>
-<input class='title' placeholder='给自己的打卡起一个标题'></input>
-<textarea class='content'  auto-focus='true' placeholder='输入你的打卡内容'>
+
+<input class='title' placeholder='给自己的打卡起一个标题' name='dakatitle' value=''></input>
+<textarea class='content'  auto-focus='true' placeholder='输入你的打卡内容' name='dakacontent'>
 </textarea>
 
 </view>
 
-<button class='dakabtn' type='primary'>打卡</button>
+<button class='dakabtn' type='primary' form-type='submit'>打卡</button>
+</form>

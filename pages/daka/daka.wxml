@@ -37,7 +37,6 @@
 <text>{{item.DakaTitle}}</text>
 </view>
 </view>
-
 <view class='daka-content'>
 
 {{tools.sub(tools.delHtmlTag(item.DakaContent),50)}}

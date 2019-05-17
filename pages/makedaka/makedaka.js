@@ -1,4 +1,6 @@
 // pages/makedaka/makedaka.js
+const app = getApp();
+const peiban = require('../../utils/peiban.js');
 Page({
 
   /**
@@ -22,9 +24,10 @@ Page({
       kongjianid: options.kid,
       peibanshi: options.peibanshi,
       renwuid: options.id,
-      bookid: options.bid
+      bookid: options.bid,
+      userid: app.globalData.userInfo.Id
     })
-    console.log('空间ID是：'+options.kid+'陪伴师' + options.peibanshi+'任务ID' +options.id+'bookid'+options.bid);
+    console.log('空间ID是：' + options.kid + '陪伴师' + options.peibanshi + '任务ID' + options.id + 'bookid' + options.bid + 'userid' + app.globalData.userInfo.Id);
   },
 
   /**
@@ -73,6 +76,41 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+
+  },
+  daka:function(e){
+    var _this=this;
+    var dakatitle = e.detail.value.dakatitle;
+    var dakacontent = e.detail.value.dakacontent;
+    console.log('dakatitle', dakatitle);
+    console.log('dakacontent', dakacontent);
+
+    peiban.renwuDaka(_this.data.renwuid, _this.data.bookid, _this.data.kongjianid, _this.data.peibanshi, _this.data.userid, dakatitle,dakacontent)
+      .then(function (data) {
+
+        if(data.MessageStatus=='true')
+        {
+        
+          wx.showModal({
+            title: '打卡成功',
+            content: '打卡成功',
+            showCancel:'false',
+            success(res) {
+              if (res.confirm) {
+                wx.navigateBack({
+                })
+              } 
+            }
+          })
+          console.log('打卡成功');
+        }
+        else
+        {
+          console.log('打卡失败');
+        }
+
+      })
+    
 
   }
 })

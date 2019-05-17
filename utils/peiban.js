@@ -23,7 +23,6 @@ const getSpaceByUid = (uid,count) => new Promise((resolve) => {
       'Content-Type': 'application/json'
     },
     success: function (res) {
-
       resolve(res.data);
     }
   });
@@ -149,6 +148,25 @@ const getRenwuById = (id) => new Promise((resolve) => {
   });
 });
 
+const renwuDaka = (rid,bid,kid,peibanshi,zhixingzhe,title,dakacontent) => new Promise((resolve) => {
+  wx.request({
+    url: app.globalData.apiUrl + 'xiaochengxu/MakeDaka?rid=' + rid
+      + '&bid=' + bid
+      + '&kid=' + kid
+      + '&peibanshi=' + peibanshi
+      + '&zhixingzhe=' + zhixingzhe
+      + '&title=' + title
+      + '&dakacontent=' + dakacontent,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    success: function (res) {
+
+      resolve(res.data);
+    }
+  });
+});
+
 
 //暴露接口给外部使用
 module.exports = {
@@ -162,6 +180,7 @@ module.exports = {
   getBijisByPid: getBijisByPid,
   getUserInfoById: getUserInfoById,
   getRenwuById: getRenwuById,
-  getBijiByRenwuId: getBijiByRenwuId
+  getBijiByRenwuId: getBijiByRenwuId,
+  renwuDaka: renwuDaka
 }
 
