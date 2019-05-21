@@ -12,7 +12,7 @@ Page({
     dakaid:0,
     daka:{},
     article_content:'',
-    // dianzans:[],
+    //dianzans:[],
     dianzanrens:[],
     pingluns:[],
     pinglunrens:[]
@@ -26,7 +26,9 @@ Page({
     _this.setData({
       dakaid:options.id,
     })
-
+    wx.showLoading({
+      title: '加载中...',
+    })
     
     wx.request({
       url: app.globalData.apiUrl + 'xiaochengxu/GetBijiById?id='+_this.data.dakaid,
@@ -41,6 +43,9 @@ Page({
         });
         
         Wxparse.wxParse('article_content', 'html', res.data.DakaContent, _this, 5)
+      },
+      complete:function(res){
+        wx.hideLoading();
       }
     });
     wx.request({
