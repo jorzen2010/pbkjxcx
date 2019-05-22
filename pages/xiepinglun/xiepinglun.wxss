@@ -1,0 +1,14 @@
+/* pages/xiepinglun/xiepinglun.wxss */
+.title{
+  font-size: 16pt;
+  font-weight: 600;
+  margin:10px 5px;
+}
+.pinglunform{
+  background-color: #ffffff;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.dakabtn{
+  margin: 0px 5px;
+}

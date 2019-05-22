@@ -167,6 +167,25 @@ const renwuDaka = (rid,bid,kid,peibanshi,zhixingzhe,title,dakacontent) => new Pr
   });
 });
 
+const dakaPinglun = (bijiid, dakarenid, peibanshi, kongjianid, bookid, pinglunren, pingluncontent) => new Promise((resolve) => {
+  wx.request({
+    url: app.globalData.apiUrl + 'xiaochengxu/DakaPinglun?bijiid=' + bijiid
+      + '&dakarenid=' + dakarenid
+      + '&peibanshi=' + peibanshi
+      + '&kongjianid=' + kongjianid
+      + '&bookid=' + bookid
+      + '&pinglunren=' + pinglunren
+      + '&pingluncontent=' + pingluncontent,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    success: function (res) {
+
+      resolve(res.data);
+    }
+  });
+});
+
 
 //暴露接口给外部使用
 module.exports = {
@@ -181,6 +200,7 @@ module.exports = {
   getUserInfoById: getUserInfoById,
   getRenwuById: getRenwuById,
   getBijiByRenwuId: getBijiByRenwuId,
-  renwuDaka: renwuDaka
+  renwuDaka: renwuDaka,
+  dakaPinglun:dakaPinglun
 }
 

@@ -10,7 +10,8 @@
     "pages/spacemulu/spacemulu",
     "pages/spaceinfo/spaceinfo",
     "pages/weizhuce/weizhuce",
-    "pages/makedaka/makedaka"
+    "pages/makedaka/makedaka",
+    "pages/xiepinglun/xiepinglun"
   ],
   "window": {
     "backgroundTextStyle": "light",

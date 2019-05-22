@@ -137,5 +137,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  xiepinglun: function (event){
+    wx.navigateTo({
+      url: '/pages/xiepinglun/xiepinglun?id=' + event.currentTarget.dataset.id,
+    })
   }
 })
