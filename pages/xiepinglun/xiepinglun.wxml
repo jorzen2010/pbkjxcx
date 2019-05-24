@@ -1,6 +1,6 @@
 <!--pages/xiepinglun/xiepinglun.wxml-->
 <view class='title'>
-<text>文章题目的地方应该少儿放醋点放大点</text>
+<text>{{daka.DakaTitle}}</text>
 </view>
 <form bindsubmit='pinglun'>
 <view class='pinglunform'>

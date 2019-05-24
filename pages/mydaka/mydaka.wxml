@@ -15,10 +15,10 @@
 <view class='daka-item'  bindtap='dakacontent' data-id='{{item.Id}}'>
 
 <view class='daka-item-user'>
-<image src="/src/images/shu.png" mode='scaleToFill'></image>
+<image src="{{userInfo.RenAvatar}}" mode='scaleToFill'></image>
 <view class='daka-item-usertext'>
-<text>赵征</text>
-<text>2019-04-04 08：45</text>
+<text>{{userInfo.RenName}}</text>
+<!-- <text>2019-04-04 08：45</text> -->
 </view>
 </view>
 

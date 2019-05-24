@@ -8,17 +8,18 @@
 <template is="wxParse" data="{{wxParseData:article_content.nodes}}"/>
 </view> 
 
-<view  class='dianzancontent'>
+<!-- <view  class='dianzancontent'>
 <block wx:for='{{dianzanrens}}' wx:key='key'>
 
 <image src='{{item.RenAvatar}}' class='dianzanavatar'></image>
 <image src='{{item.RenAvatar}}' class='dianzanavatar'></image>
 </block>
-</view>
+</view> -->
 
 <view class='history'>
-<text class='history-yuedu'>阅读  89098</text>
-<text class='histroy-dianzan'>点赞  897</text>
+<text class='history-yuedu'>文章于{{daka.DakaTime}}发布</text>
+<!-- <text class='history-yuedu'>阅读  89098</text>
+<text class='histroy-dianzan'>点赞  897</text> -->
 </view>
 
 </view>

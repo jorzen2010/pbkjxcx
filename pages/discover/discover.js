@@ -19,6 +19,10 @@ Page({
    */
   onLoad: function (options) {
     var _this=this; 
+
+    wx.showLoading({
+      title: '加载中...',
+    })
     //这是一个回调函数的判断
     app.userInfoReadyCallback=function(){
 
@@ -28,7 +32,7 @@ Page({
         _this.setData({
           spaceslist:data.spaces
         });
-      console.log(data);
+        wx.hideLoading();
       })
 
     };
@@ -38,14 +42,15 @@ Page({
         _this.setData({
           bijis: data.dakas
         });
+      wx.hideLoading();
     });
 
-    peiban.getbijisByCount(5)
-      .then(function (data) {
-        _this.setData({
-          dakas: data.dakas
-        });
-      });
+    // peiban.getbijisByCount(5)
+    //   .then(function (data) {
+    //     _this.setData({
+    //       dakas: data.dakas
+    //     });
+    //   });
     
     
   
