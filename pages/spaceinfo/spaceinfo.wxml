@@ -29,7 +29,6 @@
 <block wx:for='{{mulu}}' wx:key='key'>
 <view class='muluitem'>
 <text>{{index+1}}、{{item.Title}}</text>
-<text>解锁</text>
 </view>
 </block>
 </view>

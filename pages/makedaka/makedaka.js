@@ -85,31 +85,43 @@ Page({
     console.log('dakatitle', dakatitle);
     console.log('dakacontent', dakacontent);
 
-    peiban.renwuDaka(_this.data.renwuid, _this.data.bookid, _this.data.kongjianid, _this.data.peibanshi, _this.data.userid, dakatitle,dakacontent)
-      .then(function (data) {
-
-        if(data.MessageStatus=='true')
-        {
-        
-          wx.showModal({
-            title: '打卡成功',
-            content: '打卡成功',
-            showCancel:'false',
-            success(res) {
-              if (res.confirm) {
-                wx.navigateBack({
-                })
-              } 
-            }
-          })
-          console.log('打卡成功');
-        }
-        else
-        {
-          console.log('打卡失败');
-        }
-
+    if(dakatitle==''||dakacontent=='')
+    {
+      wx.showModal({
+        title: '错误',
+        content: '题目和内容均不能为空',
+        showCancel: 'false',
       })
+    }
+    else
+    {
+      peiban.renwuDaka(_this.data.renwuid, _this.data.bookid, _this.data.kongjianid, _this.data.peibanshi, _this.data.userid, dakatitle, dakacontent)
+        .then(function (data) {
+
+          if (data.MessageStatus == 'true') {
+
+            wx.showModal({
+              title: '打卡成功',
+              content: '打卡成功',
+              showCancel: 'false',
+              success(res) {
+                if (res.confirm) {
+                  wx.navigateBack({
+                  })
+                }
+              }
+            })
+            console.log('打卡成功');
+          }
+          else {
+            console.log('打卡失败');
+          }
+
+        })
+
+    }
+
+    
     
 
   }
